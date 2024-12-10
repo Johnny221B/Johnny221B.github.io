@@ -10,9 +10,9 @@ redirect_from:
 Hi, this is my homepage. I am a senior student in the [School of Data Science (SDS)](https://sds.cuhk.edu.cn/en) at [The Chinese University of Hong Kong, Shenzhen (CUHKSZ)](https://www.cuhk.edu.cn/en), majoring in Data Science and Big Data Technology. During my undergraduate studies, I am fortunately advised by [Prof. Guanting Chen](https://gtchen430.github.io/), [Prof. Xiaocheng Li](https://xiaocheng-li.github.io/), and [Prof. Jianfeng Mao](https://sds.cuhk.edu.cn/en/teacher/268).
 
 Previously, my research was focused on:
-(1) Data-Driven Optimization
-(2) Large Language Model
-(3) Deep Learning
+- (1) Data-Driven Optimization
+- (2) Large Language Model
+- (3) Deep Learning
 
 Additionally, I am exploring the integration of LLMs with decision-making to address a broader range of real-world challenges: (1) how to utilize LLMs’ ability to make decision in queueing or scheduling. (2) how to combine data-driven optimization problems with LLMs. Feel free to connect with him on [LinkedIn](https://www.linkedin.com/in/jingxuan-wu-877397287/) and check out my projects on [GitHub](http://github.com/Johnny221B).
 
