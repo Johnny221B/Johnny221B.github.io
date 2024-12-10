@@ -19,7 +19,7 @@ Additionally, I am exploring the integration of LLMs with decision-making to add
 ### Research Experience
 
 * **Resource Prediction and Allocation for Machine Learning Tasks**  
-  * *May 2024 - Present, University of North Carolina at Chapel Hill*  
+  * *May 2024 - Present, University of North Carolina at Chapel Hill & Imperial College London*  
   * Predicted runtime and energy consumption of ML tasks on GPUs using LLMs.
 
 * **Research on Airport Congestion Contagion**  
