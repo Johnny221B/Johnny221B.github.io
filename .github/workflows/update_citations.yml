@@ -6,16 +6,20 @@ on:
     - cron: '0 3 * * 1'
   workflow_dispatch:  # 允许手动触发
 
+# 设置权限，允许提交到仓库
+permissions:
+  contents: write
+
 jobs:
   update-badge:
     runs-on: ubuntu-latest
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4  # 使用最新版本
       
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4  # 使用最新版本
         with:
           python-version: '3.9'
       
@@ -33,3 +37,11 @@ jobs:
           git config --global user.email 'actions@github.com'
           git add index.html
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update citation count in badge" && git push)
+      
+      # 触发部署工作流
+      - name: Trigger deployment workflow
+        if: success()
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: deploy-site
