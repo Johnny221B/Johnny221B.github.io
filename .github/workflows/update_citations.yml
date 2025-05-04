@@ -1,0 +1,35 @@
+name: Update Citation Badge
+
+on:
+  schedule:
+    # 每周一次 (周一凌晨3点)
+    - cron: '0 3 * * 1'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+      
+      - name: Update citation badge
+        run: python scripts/update_citation_badge.py
+      
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add index.html
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update citation count in badge" && git push)
