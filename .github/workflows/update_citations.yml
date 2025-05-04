@@ -27,9 +27,24 @@ jobs:
       - name: Update citation badge
         run: python scripts/update_citation_badge.py
       
-      - name: Commit and push if changed
+      - name: Check if there are changes
+        id: changes
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-          git add index.html
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update citation count in badge" && git push)
+          git diff --quiet index.html || echo "::set-output name=has_changes::true"
+      
+      - name: Create Pull Request
+        if: steps.changes.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update citation count in badge
+          branch: update-citation-badge
+          delete-branch: true
+          title: 'Update citation count in badge'
+          body: |
+            This PR updates the citation badge with the latest count from Google Scholar.
+            
+            Generated automatically by GitHub Actions.
+          labels: |
+            automated
+            citation-update
