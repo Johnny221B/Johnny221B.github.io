@@ -23,6 +23,30 @@
   </head>
 
   <body>
+    <div id="scroll-progress"></div>
+    <style>
+      #scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 0;
+        background: rgba(151, 65, 58, 0.8);
+        z-index: 9999;
+        transition: width 0.1s ease-out;
+      }
+    </style>
+  
+    <script>
+      window.addEventListener("scroll", function () {
+        const progress = document.getElementById("scroll-progress");
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight =
+          document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (scrollTop / scrollHeight) * 100;
+        progress.style.width = scrolled + "%";
+      });
+    </script>
     <table
       style="
         width: 100%;
@@ -95,9 +119,8 @@
                       lives.
                     </p>
                     <p>
-                      <b>Currently, I am seeking a PhD position. </b>
-                      If you are interested in my research or have any
-                      questions, please feel free to contact and
+                      <b>Currently, I am seeking a PhD position.</b>
+                      I am also open to research collaborations. If you are interested in my work or would like to discuss potential collaboration opportunities, please feel free to reach out and 
                       <link
                         href="https://assets.calendly.com/assets/external/widget.css"
                         rel="stylesheet"
@@ -110,8 +133,7 @@
                       <a
                         href=""
                         onclick="Calendly.initPopupWidget({url: 'https://calendly.com/yuzheyang/30min'});return false;"
-                        >schedule time</a
-                      >
+                      >schedule time</a>
                       with me.
                     </p>
                     <b>Email</b>:
@@ -122,7 +144,7 @@
                     <br />
                   </td>
                   <td style="padding: 0.1%; width: 25%; max-width: 30%;">
-                  <div class="profile-container">
+                  <div class="profile-container" style="margin-top: 40px">
                     <div class="profile-card">
                     <div class="profile-front">
                       <video
@@ -206,8 +228,8 @@
             </table>
 
             <div id="menu">
-              <div><a href="./index.html">Home</a></div>
               <div><a href="#publications">Publications</a></div>
+              <div><a href="#experience">Experience</a></div>
               <div><a href="./src/pdf/yuzhe_cv.pdf">Resume</a></div>
               <div><a href="https://tobyyang7.github.io/photo/">Gallery</a></div>
             </div>
@@ -407,6 +429,96 @@
           <a href="https://github.com/TobyYang7/Black-Box-Tuning">DeepSeek and LLaMA Implementation for Black-Box-Tuning (ICML 2022)</a><br>
           <a href="https://github.com/TobyYang7/Quant-GPT">Quant-GPT: Money is All You Need</a><br>
           <a href="https://github.com/TobyYang7/Travel-Insurance-Recommendation-AI-System">Travel Insurance Recommendation AI System</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- Experience -->
+<table id="experience" style="width: 100%; border: 0; border-spacing: 0; border-collapse: separate; margin-left: auto; margin-right: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 20px; width: 100%; vertical-align: middle;">
+        <heading style="display: block; margin-bottom: 24px;">
+          Experience
+        </heading>
+
+        <!-- CUHK NLP Group -->
+        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+          <!-- CUHK Logo -->
+          <img src="./src/logo/CUHK.svg" alt="CUHK Logo"
+               style="width: 40px; height: 40px; margin-right: 15px;" />
+          <div style="flex: 1;">
+            <strong>CUHK-Shenzhen NLP Group (FreedomAI)</strong>
+            <span style="margin-left: auto; float: right; color: gray;">2024.06 – Present</span>
+            <br />Undergraduate Research Assistant
+            <br />
+            Advised by <a href="https://wabyking.github.io/old.html">Prof. Benyou Wang</a> and Dr. Yan Hu
+            <br />
+            <span style="color: gray;"><a href="https://mp.weixin.qq.com/s/ofw1yKqk62Vp8tbRUmXfQw" style="color: gray;"s>Best Paper Award & Travel Grant Award (ICLR 2025 Workshop)</a></span>
+          </div>
+        </div>
+
+        <!-- Nanjing University -->
+        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+          <!-- NJU Logo -->
+          <img src="./src/logo/NJU.svg" alt="NJU Logo"
+               style="width: 40px; height: 40px; margin-right: 15px;" />
+          <div style="flex: 1;">
+            <strong>School of Management & Engineering, Nanjing University</strong>
+            <span style="margin-left: auto; float: right; color: gray;">2024.08 – 2025.01</span>
+            <br />Undergraduate Research Assistant
+            <br />
+            Advised by <a href="https://sme.nju.edu.cn/yhh/list.psp">Prof. Honghai Yu</a>
+          </div>
+        </div>
+
+        <!-- TheFinAI -->
+        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+          <!-- Placeholder Logo -->
+          <img src="./src/logo/finai.png" alt="TheFinAI Logo"
+               style="width: 40px; height: 40px; margin-right: 15px;" />
+          <div style="flex: 1;">
+            <strong>TheFinAI</strong>
+            <span style="margin-left: auto; float: right; color: gray;">2024.06 – 2024.10</span>
+            <br />Member
+            <br />
+            Led by <a href="https://thefin.ai/">Jimin Huang</a> and <a href="https://qianqian-xie.github.io/">Prof. Qianqian Xie</a>
+          </div>
+        </div>
+
+        <!-- CUHK Data Science -->
+        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+          <!-- Placeholder Logo -->
+          <img src="./src/logo/CUHK.svg" alt="CUHK Logo"
+               style="width: 40px; height: 40px; margin-right: 15px;" />
+          <div style="flex: 1;">
+            <strong>School of Data Science, CUHK-Shenzhen</strong>
+            <span style="margin-left: auto; float: right; color: gray;">2023.08 – 2024.06</span>
+            <br />Undergraduate Research Assistant
+            <br />
+            Advised by <a href="https://sds.cuhk.edu.cn/en/teacher/268">Prof. Jianfeng Mao</a>
+            <br />
+            <span style="color: gray;">Undergraduate Research Award (2024, 2025)</span>
+          </div>
+        </div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- Service -->
+<table style="width: 100%; border: 0px; border-spacing: 0px; border-collapse: separate; margin-right: auto; margin-left: auto;">
+  <tbody>
+    <tr>
+      <td style="padding: 20px; width: 100%; vertical-align: middle">
+        <heading>Service</heading>
+        <p>
+          <b>Reviewer:</b> IJCAI 2025, ICLR 2025 Workshop, ACL 2025 SRW
         </p>
       </td>
     </tr>
