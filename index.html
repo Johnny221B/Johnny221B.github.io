@@ -26,7 +26,7 @@
     <table
       style="
         width: 100%;
-        max-width: 900px;
+        max-width: 1000px;
         border: 0px;
         border-spacing: 0px;
         border-collapse: separate;
@@ -166,39 +166,6 @@
                       <img src="./src/logo/x.svg" alt="Twitter/X" style="height: 25px; vertical-align: middle;">
                     </a>
                   </div>
-                  
-                  <style>
-                    .profile-container {
-                    width: 100%;
-                    perspective: 1000px;
-                    }
-                  
-                    .profile-card {
-                    width: 100%;
-                    height: 0;
-                    padding-bottom: 100%;
-                    position: relative;
-                    transition: transform 0.8s;
-                    transform-style: preserve-3d;
-                    }
-                  
-                    .profile-container:hover .profile-card {
-                    transform: rotateY(180deg);
-                    }
-                  
-                    .profile-front,
-                    .profile-back {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    backface-visibility: hidden;
-                    -webkit-backface-visibility: hidden;
-                    }
-                  
-                    .profile-back {
-                    transform: rotateY(180deg);
-                    }
-                  </style>
                   </td>
               </tbody>
             </table>
@@ -218,7 +185,7 @@
                     <heading>News</heading>
                     <p>
                       <b>05/2025</b>: Invited talk at <a href="https://mp.weixin.qq.com/s/fGJvmUHTk5dDzOhLdHsv_Q">Wisemodel.cn</a> (Special Session by FreedomAI Team in CUHK-Shenzhen).<br>
-                      <b>04/2025</b>: <a href="https://tobyyang7.github.io/TwinMarket">TwinMarket</a> won the <a href="./src/img/best_paper.jpg"><strong>Best Paper Award</strong></a> at the <i><a href="https://sites.google.com/view/financialaiiclr25/home">Advances in Financial AI Workshop</a> @ ICLR 2025</i>.<br>
+                      <b>04/2025</b>: <a href="https://tobyyang7.github.io/TwinMarket">TwinMarket</a> won the <a href="./src/img/best_paper.jpg"><strong>Best Paper Award 🏆</strong></a> at the <i><a href="https://sites.google.com/view/financialaiiclr25/home">Advances in Financial AI Workshop</a> @ ICLR 2025</i>.<br>
                       <b>04/2025</b>: Invited talk at the <i><a href="https://sites.google.com/view/financialaiiclr25/home">Advances in Financial AI Workshop</a> @ ICLR 2025</i> and NUS in Singapore 🇸🇬.<br>
                       <b>02/2025</b>: Our new work on socio-economic simulation, <a href="https://tobyyang7.github.io/TwinMarket">TwinMarket</a>, has been released.<br>
                       <b>01/2025</b>: <a href="https://arxiv.org/abs/2410.14059">One paper (UCFE-Benchmark)</a> was accepted to <i>Findings of NAACL 2025</i>.<br>
@@ -252,7 +219,7 @@
     <tr>
       <td style="padding: 20px; width: 100%; vertical-align: middle">
         <heading>Publications</heading>
-        <p>(* indicates equal contribution)</p>
+        <p>(* indicates equal contribution; † indicates corresponding author)</p>
 
         <table style="width: 100%; border: 0px; border-spacing: 0px; border-collapse: separate; margin-right: auto; margin-left: auto;">
           
@@ -269,9 +236,9 @@
               <img src="./src/img/TwinMarket.jpg" width="100%" />
             </td>
             <td style="padding: 10px; width: 65%; vertical-align: middle">
-              <papertitle>TwinMarket: A Scalable Behavioral and Social Simulation for Financial Markets</papertitle>
+              <papertitle><img src="./src/logo/twinmarket.png" alt="TwinMarket" style="height: 13px; margin-right: 2px;">TwinMarket: A Scalable Behavioral and Social Simulation for Financial Markets</papertitle>
               <br />
-              <strong>Yuzhe Yang*</strong>, Yifei Zhang*, Minghao Wu*, Kaidi Zhang, Yunmiao Zhang, Honghai Yu, Yan Hu, Benyou Wang
+              <strong>Yuzhe Yang*</strong>, Yifei Zhang*, Minghao Wu*, Kaidi Zhang, Yunmiao Zhang, Honghai Yu†, Yan Hu, Benyou Wang†
               <br />
               <br />
               <em>{<a href="https://sites.google.com/view/financialaiiclr25/home">Financial AI</a>; <a href="https://sites.google.com/view/worldmodel-iclr2025/">World Models</a>} @ ICLR 2025 Workshop</em>
@@ -297,7 +264,7 @@
             <td style="padding: 10px; width: 65%; vertical-align: middle">
               <papertitle>UCFE: A User-Centric Financial Expertise Benchmark for Large Language Models</papertitle>
               <br />
-              <strong>Yuzhe Yang*</strong>, Yifei Zhang*, Yan Hu*, Yilin Guo, Ruoli Gan, Yueru He, Mingcong Lei, Xiao Zhang, Haining Wang, Qianqian Xie, Jimin Huang, Honghai Yu, Benyou Wang
+              <strong>Yuzhe Yang*</strong>, Yifei Zhang*, Yan Hu*, Yilin Guo, Ruoli Gan, Yueru He, Mingcong Lei, Xiao Zhang, Haining Wang, Qianqian Xie†, Jimin Huang, Honghai Yu†, Benyou Wang†
               <br />
               <br />
               <em>Findings of NAACL 2025</em>
@@ -321,14 +288,12 @@
           <td style="padding: 10px; width: 65%; vertical-align: middle">
             <papertitle>Feature Extraction and Steering for Enhanced Chain-of-Thought Reasoning in Language Models</papertitle>
             <br />
-            Zihao Li, Xu Wang, <strong>Yuzhe Yang</strong>, Ziyu Yao, Haoyi Xiong, Mengnan Du
+            Zihao Li, Xu Wang, <strong>Yuzhe Yang</strong>, Ziyu Yao, Haoyi Xiong, Mengnan Du†
             <br />
             <br />
             <em>arXiv preprint 2025</em>
             <br />
-            <span style="font-size: 95%">
-              Enhance LLM reasoning by steering activations via a novel SAE-free method using Chain-of-Thought features, without external data
-            </span>
+            Enhance LLM reasoning by steering activations via a novel SAE-free method using Chain-of-Thought features, without external data
             <br />
             <a href="https://arxiv.org/abs/2505.15634">Paper</a>
             <p></p>
@@ -350,7 +315,7 @@
             <td style="padding: 10px; width: 65%; vertical-align: middle">
               <papertitle>Open-FinLLMs: Open Multimodal Large Language Models for Financial Applications</papertitle>
               <br />
-              Jimin Huang, Mengxi Xiao, Dong Li, Zihao Jiang, <strong>Yuzhe Yang</strong>, Yifei Zhang, Lingfei Qian, Yan Wang, Xueqing Peng, Yang Ren, Ruoyu Xiang, Zhengyu Chen, Xiao Zhang, Yueru He, Weiguang Han, Shunian Chen, Lihang Shen, Daniel Kim, Yangyang Yu, Yupeng Cao, Zhiyang Deng, Haohang Li, Duanyu Feng, Yongfu Dai, VijayaSai Somasundaram, Peng Lu, Guojun Xiong, Zhiwei Liu, Zheheng Luo, Zhiyuan Yao, Ruey-Ling Weng, Meikang Qiu, Kaleb E Smith, Honghai Yu, Yanzhao Lai, Min Peng, Jian-Yun Nie, Jordan W. Suchow, Xiao-Yang Liu, Benyou Wang, Alejandro Lopez-Lira, Qianqian Xie, Sophia Ananiadou, Junichi Tsujii
+              Jimin Huang, Mengxi Xiao, Dong Li, Zihao Jiang, <strong>Yuzhe Yang</strong>, Yifei Zhang, Lingfei Qian, Yan Wang, Xueqing Peng, Yang Ren, Ruoyu Xiang, Zhengyu Chen, Xiao Zhang, Yueru He, Weiguang Han, Shunian Chen, Lihang Shen, Daniel Kim, Yangyang Yu, Yupeng Cao, Zhiyang Deng, Haohang Li, Duanyu Feng, Yongfu Dai, VijayaSai Somasundaram, Peng Lu, Guojun Xiong, Zhiwei Liu, Zheheng Luo, Zhiyuan Yao, Ruey-Ling Weng, Meikang Qiu, Kaleb E Smith, Honghai Yu, Yanzhao Lai, Min Peng, Jian-Yun Nie, Jordan W. Suchow, Xiao-Yang Liu†, Benyou Wang†, Alejandro Lopez-Lira†, Qianqian Xie†, Sophia Ananiadou, Junichi Tsujii
               <br />
               <br />
               <em>arXiv preprint 2024</em>
@@ -371,7 +336,7 @@
             <td style="padding: 10px; width: 65%; vertical-align: middle">
               <papertitle>FAST-CA: Fusion-based Adaptive Spatial-Temporal Learning with Coupled Attention for airport network delay propagation prediction</papertitle>
               <br />
-              Chi Li, Xixian Qi, <strong>Yuzhe Yang</strong>, Zhuo Zeng,Lianmin Zhang, Jianfeng Mao
+              Chi Li, Xixian Qi, <strong>Yuzhe Yang</strong>, Zhuo Zeng,Lianmin Zhang, Jianfeng Mao†
               <br />
               <br />
               <em>Information Fusion 2024</em>
@@ -579,8 +544,8 @@
                         src="//cdn.clustrmaps.com/map_v2.js?cl=5ab2ff&w=300&t=tt&d=xoDg7VaCrLXmmLZN9tIoONrsj5uu62Bt8Fx4GVA9cuM&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353"
                       ></script>
                     </div>
-                    <p style="text-align: center; font-size: small">
-                      2024-2025 ©️ Yuzhe Yang
+                    <p style="text-align: center; font-size: small; color: gray;">
+                      2024-2025 ©️ Yuzhe (Toby) Yang
                     </p>
                   </td>
                 </tr>
