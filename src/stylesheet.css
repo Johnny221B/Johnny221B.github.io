@@ -62,6 +62,14 @@
   src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+/* latin-ext */
+@font-face {
+  font-family: 'SF Pro';
+  src: url('https://developer.apple.com/design/human-interface-guidelines/foundations/sf-symbols/') format('woff2'),
+       url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
 
 a {
   color: #97413a; /* #314e64; */ /* #1772d0; */
@@ -80,45 +88,73 @@ th,
 tr,
 p,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
-}
-
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 600
+  font-weight: 350
 }
 
 b {
-  font-weight: 600
+  font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
   /*color: #313164;*/
   text-decoration: underline;
   text-decoration-style: solid;
   -webkit-text-decoration-color: #97413a;
   text-decoration-color: #97413a; /* #ac715b; */
+  font-weight: 800
 }
 
 papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 16px;
-  font-weight: 600
+  font-weight: 750
 }
 
 name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 40px;
+  transition: all 0.5s;
+  -webkit-text-stroke: 1px #000000;
+  font-variation-settings: "wght" 300, "ital" 0;
+  text-align: center;
+  color: #000000;
+  text-shadow: none;
 }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 800
+
+name:hover {
+  font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
+  font-variation-settings: "wght" 1200, "ital" 1;
+  -webkit-text-stroke: 0px #000000;
+  color: #51221d;
+  text-shadow: 
+  10px 10px 0px #ee6352,
+  15px 15px 0px #f07a6a,
+  20px 20px 0px #f28b7d,
+  25px 25px 0px #f49b90
+}
+
+name-normal {
+  font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 40px;
+  transition: all 1s;
+  -webkit-text-stroke: 1px #000000;
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-align: center;
+  color: #000000;
+  text-shadow: none;
+}
+
+name-normal:hover {
+  font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
+  font-variation-settings: "wght" 700, "ital" 1;
+  -webkit-text-stroke: 0px #000000;
 }
 
 .one {
