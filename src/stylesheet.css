@@ -96,7 +96,7 @@ a {
 b {
   font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 heading {
@@ -107,7 +107,7 @@ heading {
   text-decoration-style: solid;
   -webkit-text-decoration-color: #97413a;
   text-decoration-color: #97413a; /* #ac715b; */
-  font-weight: 800
+  font-weight: 700
 }
 
 papertitle {
@@ -119,25 +119,62 @@ papertitle {
 name {
   font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 40px;
-  transition: all 0.5s;
-  -webkit-text-stroke: 1px #000000;
-  font-variation-settings: "wght" 300, "ital" 0;
+  transition: all 1s;
+  font-variation-settings: "wght" 200, "ital" 0;
   text-align: center;
   color: #000000;
-  text-shadow: none;
 }
 
 
+/* 1. 供渐变用的颜色变量 */
+:root {
+  --clr-1: #00c2ff;
+  --clr-2: #33ff8c;
+  --clr-3: #ffc640;
+  --clr-4: #e54cff;
+  --clr-5: #ff4f81;
+  --clr-6: #8e44ad;
+  --clr-7: #00ffd5;
+}
+
+/* 2. 普通状态保持不变 —— 这里略 */
+
+/* 3. Aurora 渐变 Hover 版 */
 name:hover {
+  /* 字体 ▸ 斜体/字重随个人口味调整 */
   font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
-  font-variation-settings: "wght" 1200, "ital" 1;
-  -webkit-text-stroke: 0px #000000;
-  color: #51221d;
-  text-shadow: 
-  10px 10px 0px #ee6352,
-  15px 15px 0px #f07a6a,
-  20px 20px 0px #f28b7d,
-  25px 25px 0px #f49b90
+  font-size: 45px;
+  font-variation-settings: "wght" 1200, "ital" 0;
+
+  /* 让文本填充由渐变决定 */
+  color: transparent;                 /* 本体透明 */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;      /* 渐变裁剪到文字 */
+          background-clip: text;
+  -webkit-text-stroke: 0;             /* 取消描边 */
+
+  /* Aurora 渐变本体 */
+  background-image: linear-gradient(
+      130deg,
+      var(--clr-1),
+      var(--clr-2),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),
+      var(--clr-6),
+      var(--clr-7)
+  );
+  background-size: 400% 400%;         /* 做流动动画要放大画布 */
+
+  /* 流动动画 */
+  animation: aurora-shift 5s ease-in-out infinite;
+}
+
+/* 4. 渐变流动关键帧 */
+@keyframes aurora-shift {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
 }
 
 name-normal {
@@ -209,13 +246,15 @@ span.badge {
     width: 20%;
     text-align: center;
     vertical-align: middle;
-    font-weight: 500;
     color: #333;
+    transition: all 0.3s;
+    font-variation-settings: "wght" 500, "ital" 0;
 }
 
 /* Hover effect on each menu item */
 #menu div:hover {
     background: #ffe1df;
+    font-variation-settings: "wght" 1200, "ital" 0;
 }
 
 /* Active (selected) menu item */
