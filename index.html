@@ -105,9 +105,18 @@
                       with me.
                     </p>
                     <b>Email</b>:
-                    <a href="mailto:yuzheyang@link.cuhk.edu.cn"
-                      ><code>yuzheyang@link.cuhk.edu.cn</code></a
-                    >
+                    <span id="email"></span>
+                    <script>
+                      const user = "yuzheyang";
+                      const domain = "link.cuhk.edu.cn";
+                      const email = user + "@" + domain;
+                      const link = "mailto:" + email;
+                    
+                      const a = document.createElement("a");
+                      a.href = link;
+                      a.innerHTML = `<code>${email}</code>`;
+                      document.getElementById("email").appendChild(a);
+                    </script>
                     <br />
                     <br />
                   </td>
