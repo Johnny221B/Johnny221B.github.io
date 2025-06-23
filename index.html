@@ -23,37 +23,49 @@
   </head>
 
   <body>
-    <table
-      style="
-        width: 100%;
-        max-width: 1000px;
-        border: 0px;
-        border-spacing: 0px;
-        border-collapse: separate;
-        margin-right: auto;
-        margin-left: auto;
-      "
-    >
+    <table class="main-container">
       <tbody>
-        <tr style="padding: 0px">
-          <td style="padding: 0px">
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
+        <tr class="zero-padding">
+          <td class="zero-padding">
+            <table class="content-table">
               <tbody>
-                <tr style="padding: 0px">
-                  <td style="padding: 2.5%; width: 60%; vertical-align: middle">
-                    <p style="text-align: center">
+                <tr class="zero-padding profile-row">
+                  <td class="profile-section">
+                    <p class="text-center">
                       <!-- <name>Yuzhe</name> <name-normal>(Toby)</name-normal> <name>Yang</name>  -->
                       <name>Yuzhe (Toby) Yang</name>
                     </p>
+                    
+                    <!-- Mobile Profile Image - Only visible on mobile -->
+                    <div class="mobile-profile-container">
+                      <div class="profile-container mobile-profile-size">
+                        <div class="profile-card">
+                          <div class="profile-front">
+                            <video class="profile-video" autoplay muted loop playsinline>
+                              <source src="./src/img/profile-hdr.mp4" type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
+                          <div class="profile-back">
+                            <img class="profile-img" alt="lego photo" src="./src/img/lego.gif" />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Mobile Social Media Links -->
+                      <div class="social-links">
+                        <a href='https://scholar.google.com/citations?user=Oj296F8AAAAJ' class="social-link">
+                          <img src="./src/logo/google-scholar.svg" alt="Google Scholar" class="social-icon">
+                        </a>
+                        <a href='https://github.com/TobyYang7' class="social-link">
+                          <img src="./src/logo/github.svg" alt="GitHub" class="social-icon">
+                        </a>
+                        <a href='https://x.com/Toby_Yang_7' style="text-decoration: none;">
+                          <img src="./src/logo/x.svg" alt="Twitter/X" class="social-icon">
+                        </a>
+                      </div>
+                    </div>
+                    
                     <p>
                       Hi, I am Toby Yang, also go by the name Yuzhe Yang (阳雨哲). I am currently a final-year undergrad at
                       <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a>,
@@ -120,51 +132,31 @@
                     <br />
                     <br />
                   </td>
-                  <td style="padding: 0.1%; width: 25%; max-width: 30%;">
+                  <td class="profile-image-section">
                   <div class="profile-container" style="margin-top: 40px">
                     <div class="profile-card">
                     <div class="profile-front">
-                      <video
-                      style="
-                        width: 100%;
-                        max-width: 100%;
-                        border-radius: 50%;
-                        object-fit: cover;
-                      "
-                      autoplay
-                      muted
-                      loop
-                      playsinline
-                      >
+                      <video class="profile-video" autoplay muted loop playsinline>
                         <source src="./src/img/profile-hdr.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                       </video>
                     </div>
                     <div class="profile-back">
-                      <img
-                      style="
-                        width: 100%;
-                        max-width: 100%;
-                        border-radius: 50%;
-                        object-fit: cover;
-                      "
-                      alt="lego photo"
-                      src="./src/img/lego.gif"
-                      />
+                      <img class="profile-img" alt="lego photo" src="./src/img/lego.gif" />
                     </div>
                     </div>
                   </div>
                   
                   <!-- Social Media Links -->
-                  <div style="text-align: center; margin-top: 15px;">
-                    <a href='https://scholar.google.com/citations?user=Oj296F8AAAAJ' style="text-decoration: none; margin-right: 10px;">
-                      <img src="./src/logo/google-scholar.svg" alt="Google Scholar" style="height: 25px; vertical-align: middle;">
+                  <div class="social-links">
+                    <a href='https://scholar.google.com/citations?user=Oj296F8AAAAJ' class="social-link">
+                      <img src="./src/logo/google-scholar.svg" alt="Google Scholar" class="social-icon">
                     </a>
-                    <a href='https://github.com/TobyYang7' style="text-decoration: none; margin-right: 10px;">
-                      <img src="./src/logo/github.svg" alt="GitHub" style="height: 25px; vertical-align: middle;">
+                    <a href='https://github.com/TobyYang7' class="social-link">
+                      <img src="./src/logo/github.svg" alt="GitHub" class="social-icon">
                     </a>
                     <a href='https://x.com/Toby_Yang_7' style="text-decoration: none;">
-                      <img src="./src/logo/x.svg" alt="Twitter/X" style="height: 25px; vertical-align: middle;">
+                      <img src="./src/logo/x.svg" alt="Twitter/X" class="social-icon">
                     </a>
                   </div>
                   </td>
@@ -179,10 +171,10 @@
             </div>
 
             <!-- News Section -->
-            <table style="width: 100%; border: 0px; border-spacing: 0px; border-collapse: separate; margin-right: auto; margin-left: auto;">
+            <table class="content-table">
               <tbody>
                 <tr>
-                  <td style="padding: 20px; width: 100%; vertical-align: middle">
+                  <td class="section-padding">
                     <heading>News</heading>
                     <p>
                       <b>05/2025</b>: Invited talk at <a href="https://mp.weixin.qq.com/s/fGJvmUHTk5dDzOhLdHsv_Q">Wisemodel.cn</a> (Special Session by FreedomAI Team in CUHK-Shenzhen).<br>
@@ -199,10 +191,10 @@
             </table>
 
             <!-- Research Section -->
-            <table style="width: 100%; border: 0px; border-spacing: 0px; border-collapse: separate; margin-right: auto; margin-left: auto;">
+            <table class="content-table">
               <tbody>
                 <tr>
-                  <td style="padding: 20px; width: 100%; vertical-align: middle">
+                  <td class="section-padding">
                     <heading>Research</heading>
                     <p>
                       Previously, my research was focused on:<br />
@@ -215,14 +207,14 @@
             </table>
 
 <!-- Publications Section -->
-<table id="publications" style="width: 100%; border: 0px; border-spacing: 0px; border-collapse: separate; margin-right: auto; margin-left: auto;">
+<table id="publications" class="content-table">
   <tbody>
     <tr>
-      <td style="padding: 20px; width: 100%; vertical-align: middle">
+      <td class="section-padding">
         <heading>Publications</heading>
         <p>(* indicates equal contribution; † indicates corresponding author)</p>
 
-        <table style="width: 100%; border: 0px; border-spacing: 0px; border-collapse: separate; margin-right: auto; margin-left: auto;">
+        <table class="content-table">
           
           <tr>
             <td colspan="2" class="year-divider">
@@ -232,11 +224,11 @@
           </tr>
           
           <!-- TwinMarket Publication -->
-          <tr>
-            <td style="padding: 0px; width: 35%; vertical-align: middle">
+          <tr class="publication-row">
+            <td class="publication-image">
               <img src="./src/img/TwinMarket.jpg" width="100%" />
             </td>
-            <td style="padding: 20px; width: 65%; vertical-align: middle">
+            <td class="publication-content">
               <papertitle>TwinMarket: A Scalable Behavioral and Social Simulation for Financial Markets</papertitle>
               <br />
               <b>Yuzhe Yang*</b>, Yifei Zhang*, Minghao Wu*, Kaidi Zhang, Yunmiao Zhang, Honghai Yu†, Yan Hu, Benyou Wang†
@@ -258,11 +250,11 @@
           </tr>
 
           <!-- UCFE Publication -->
-          <tr>
-            <td style="padding: 0px; width: 35%; vertical-align: middle">
+          <tr class="publication-row">
+            <td class="publication-image">
               <img src="./src/img/UCFE.png" width="100%" />
             </td>
-            <td style="padding: 20px; width: 65%; vertical-align: middle">
+            <td class="publication-content">
               <papertitle>UCFE: A User-Centric Financial Expertise Benchmark for Large Language Models</papertitle>
               <br />
               <b>Yuzhe Yang*</b>, Yifei Zhang*, Yan Hu*, Yilin Guo, Ruoli Gan, Yueru He, Mingcong Lei, Xiao Zhang, Haining Wang, Qianqian Xie†, Jimin Huang, Honghai Yu†, Benyou Wang†
@@ -282,11 +274,11 @@
           </tr>
 
         <!-- SAE-free -->
-        <tr>
-          <td style="padding: 0px; width: 35%; vertical-align: middle">
+        <tr class="publication-row">
+          <td class="publication-image">
             <img src="./src/img/sae_free.png" width="100%" />
           </td>
-          <td style="padding: 20px; width: 65%; vertical-align: middle">
+          <td class="publication-content">
             <papertitle>Feature Extraction and Steering for Enhanced Chain-of-Thought Reasoning in Language Models</papertitle>
             <br />
             Zihao Li, Xu Wang, <b>Yuzhe Yang</b>, Ziyu Yao, Haoyi Xiong, Mengnan Du†
@@ -309,11 +301,11 @@
           </tr>
 
           <!-- Open-FinLLMs Publication -->
-          <tr>
-            <td style="padding: 0px; width: 35%; vertical-align: middle">
+          <tr class="publication-row">
+            <td class="publication-image">
               <img src="./src/img/finllava.png" width="100%" />
             </td>
-            <td style="padding: 20px; width: 65%; vertical-align: middle">
+            <td class="publication-content">
               <papertitle>Open-FinLLMs: Open Multimodal Large Language Models for Financial Applications</papertitle>
               <br />
               Jimin Huang, Mengxi Xiao, Dong Li, Zihao Jiang, <b>Yuzhe Yang</b>, Yifei Zhang, Lingfei Qian, Yan Wang, Xueqing Peng, Yang Ren, Ruoyu Xiang, Zhengyu Chen, Xiao Zhang, Yueru He, Weiguang Han, Shunian Chen, Lihang Shen, Daniel Kim, Yangyang Yu, Yupeng Cao, Zhiyang Deng, Haohang Li, Duanyu Feng, Yongfu Dai, VijayaSai Somasundaram, Peng Lu, Guojun Xiong, Zhiwei Liu, Zheheng Luo, Zhiyuan Yao, Ruey-Ling Weng, Meikang Qiu, Kaleb E Smith, Honghai Yu, Yanzhao Lai, Min Peng, Jian-Yun Nie, Jordan W. Suchow, Xiao-Yang Liu†, Benyou Wang†, Alejandro Lopez-Lira†, Qianqian Xie†, Sophia Ananiadou, Junichi Tsujii
@@ -330,11 +322,11 @@
           </tr>
 
           <!-- FAST-CA Publication -->
-          <tr>
-            <td style="padding: 0px; width: 35%; vertical-align: middle">
+          <tr class="publication-row">
+            <td class="publication-image">
               <img src="./src/img/FAST-CA.jpg" width="100%" />
             </td>
-            <td style="padding: 20px; width: 65%; vertical-align: middle">
+            <td class="publication-content">
               <papertitle>FAST-CA: Fusion-based Adaptive Spatial-Temporal Learning with Coupled Attention for airport network delay propagation prediction</papertitle>
               <br />
               Chi Li, Xixian Qi, <b>Yuzhe Yang</b>, Zhuo Zeng,Lianmin Zhang, Jianfeng Mao†
@@ -350,11 +342,11 @@
           </tr>
 
           <!-- FedDTPT Publication -->
-          <tr>
-            <td style="padding: 0px; width: 35%; vertical-align: middle">
+          <tr class="publication-row">
+            <td class="publication-image">
               <img src="./src/img/feddtpt.png" width="100%" />
             </td>
-            <td style="padding: 20px; width: 65%; vertical-align: middle">
+            <td class="publication-content">
               <papertitle>FedDTPT: Federated Discrete and Transferable Prompt Tuning for Black-Box Large Language Models</papertitle>
               <br />
               Jiaqi Wu, Simin Chen, <b>Yuzhe Yang</b>, Yijiang Li, Shiyue Hou, Rui Jing, Zehua Wang, Wei Chen, Zijian Tian
@@ -375,10 +367,10 @@
 </table>
 
 <!-- Projects Section -->
-<table style="width: 100%; border: 0px; border-spacing: 0px; border-collapse: separate; margin-right: auto; margin-left: auto;">
+<table class="content-table">
   <tbody>
     <tr>
-      <td style="padding: 20px; width: 100%; vertical-align: middle">
+      <td class="section-padding">
         <heading>Projects</heading>
         <p>
           <a href="https://github.com/ValueByte-AI/Awesome-LLM-in-Social-Science">Awesome LLM in Social Science</a><br>
@@ -394,38 +386,36 @@
 
 
 <!-- Experiences -->
-<table id="experience" style="width: 100%; border: 0; border-spacing: 0; border-collapse: separate; margin-left: auto; margin-right: auto;">
+<table id="experience" class="content-table">
   <tbody>
     <tr>
-      <td style="padding: 20px; width: 100%; vertical-align: middle;">
-        <heading style="display: block; margin-bottom: 24px;">
+      <td class="section-padding">
+        <heading class="heading-margin">
           Experiences
         </heading>
 
         <!-- CUHK NLP Group -->
-        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+        <div class="experience-item">
           <!-- CUHK Logo -->
-          <img src="./src/logo/CUHK.svg" alt="CUHK Logo"
-               style="width: 40px; height: 40px; margin-right: 15px;" />
-          <div style="flex: 1;">
+          <img src="./src/logo/CUHK.svg" alt="CUHK Logo" class="experience-logo" />
+          <div class="experience-content">
             <b>CUHK-Shenzhen NLP Group (FreedomAI)</b>
-            <span style="margin-left: auto; float: right; color: gray;">2024.06 – Present</span>
+            <span class="experience-date">2024.06 – Present</span>
             <br />Undergraduate Research Assistant
             <br />
             Advised by <a href="https://wabyking.github.io/old.html">Prof. Benyou Wang</a> and Dr. Yan Hu
             <br />
-            <span style="color: gray;"><a href="https://mp.weixin.qq.com/s/ofw1yKqk62Vp8tbRUmXfQw" style="color: gray;"s>Best Paper Award & Travel Grant Award (ICLR 2025 Workshop)</a></span>
+            <span class="experience-note"><a href="https://mp.weixin.qq.com/s/ofw1yKqk62Vp8tbRUmXfQw" class="experience-note">Best Paper Award & Travel Grant Award (ICLR 2025 Workshop)</a></span>
           </div>
         </div>
 
         <!-- Nanjing University -->
-        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+        <div class="experience-item">
           <!-- NJU Logo -->
-          <img src="./src/logo/NJU.svg" alt="NJU Logo"
-               style="width: 40px; height: 40px; margin-right: 15px;" />
-          <div style="flex: 1;">
+          <img src="./src/logo/NJU.svg" alt="NJU Logo" class="experience-logo" />
+          <div class="experience-content">
             <b>School of Management & Engineering, Nanjing University</b>
-            <span style="margin-left: auto; float: right; color: gray;">2024.08 – 2025.01</span>
+            <span class="experience-date">2024.08 – 2025.01</span>
             <br />Undergraduate Research Assistant
             <br />
             Advised by <a href="https://sme.nju.edu.cn/yhh/list.psp">Prof. Honghai Yu</a>
@@ -433,13 +423,12 @@
         </div>
 
         <!-- TheFinAI -->
-        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+        <div class="experience-item">
           <!-- Placeholder Logo -->
-          <img src="./src/logo/finai.png" alt="TheFinAI Logo"
-               style="width: 40px; height: 40px; margin-right: 15px;" />
-          <div style="flex: 1;">
+          <img src="./src/logo/finai.png" alt="TheFinAI Logo" class="experience-logo" />
+          <div class="experience-content">
             <b>TheFinAI</b>
-            <span style="margin-left: auto; float: right; color: gray;">2024.06 – 2024.10</span>
+            <span class="experience-date">2024.06 – 2024.10</span>
             <br />Researcher
             <br />
             Led by <a href="https://thefin.ai/">Jimin Huang</a> and <a href="https://qianqian-xie.github.io/">Prof. Qianqian Xie</a>
@@ -447,18 +436,17 @@
         </div>
 
         <!-- CUHK Data Science -->
-        <div style="display: flex; align-items: center; margin-bottom: 24px;">
+        <div class="experience-item">
           <!-- Placeholder Logo -->
-          <img src="./src/logo/CUHK.svg" alt="CUHK Logo"
-               style="width: 40px; height: 40px; margin-right: 15px;" />
-          <div style="flex: 1;">
+          <img src="./src/logo/CUHK.svg" alt="CUHK Logo" class="experience-logo" />
+          <div class="experience-content">
             <b>School of Data Science, CUHK-Shenzhen</b>
-            <span style="margin-left: auto; float: right; color: gray;">2023.08 – 2024.06</span>
+            <span class="experience-date">2023.08 – 2024.06</span>
             <br />Undergraduate Research Assistant
             <br />
             Advised by <a href="https://sds.cuhk.edu.cn/en/teacher/268">Prof. Jianfeng Mao</a>
             <br />
-            <span style="color: gray;">Undergraduate Research Award (2024, 2025)</span>
+            <span class="experience-note">Undergraduate Research Award (2024, 2025)</span>
           </div>
         </div>
 
@@ -469,10 +457,10 @@
 
 
 <!-- Services -->
-<table style="width: 100%; border: 0px; border-spacing: 0px; border-collapse: separate; margin-right: auto; margin-left: auto;">
+<table class="content-table">
   <tbody>
     <tr>
-      <td style="padding: 20px; width: 100%; vertical-align: middle">
+      <td class="section-padding">
         <heading>Services</heading>
         <p>
           <b>Reviewer:</b> IJCAI 2025, ICLR 2025 Workshop, ACL 2025 SRW
@@ -483,21 +471,10 @@
 </table>
 
             <!-- Miscellaneous Section -->
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
+            <table class="content-table">
               <tbody>
                 <tr>
-                  <td
-                    style="padding: 20px; width: 100%; vertical-align: middle"
-                  >
+                  <td class="section-padding">
                     <heading>Miscellaneous</heading>
                     <p>
                       📸 I am an amateur photographer with an interest in
@@ -518,34 +495,19 @@
             </table>
 
             <!-- Footer Section -->
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
+            <table class="content-table">
               <tbody>
                 <tr>
-                  <td style="padding: 0px">
+                  <td class="zero-padding">
                     <br />
-                    <div
-                      style="
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                      "
-                    >
+                    <div class="footer-center">
                       <script
                         type="text/javascript"
                         id="clustrmaps"
                         src="//cdn.clustrmaps.com/map_v2.js?cl=5ab2ff&w=300&t=tt&d=xoDg7VaCrLXmmLZN9tIoONrsj5uu62Bt8Fx4GVA9cuM&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353"
                       ></script>
                     </div>
-                    <p style="text-align: center; font-size: small; color: gray;">
+                    <p class="footer-text">
                       2024-2025 ©️ Yuzhe (Toby) Yang
                     </p>
                   </td>

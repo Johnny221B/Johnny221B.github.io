@@ -364,3 +364,411 @@ font-weight: 600;
   .profile-back {
   transform: rotateY(180deg);
   }
+
+/* 新增的布局样式 */
+.main-container {
+  width: 100%;
+  max-width: 1000px;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content-table {
+  width: 100%;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.zero-padding {
+  padding: 0px;
+}
+
+.profile-section {
+  padding: 2.5%;
+  width: 60%;
+  vertical-align: middle;
+}
+
+.profile-image-section {
+  padding: 0.1%;
+  width: 25%;
+  max-width: 30%;
+}
+
+.section-padding {
+  padding: 20px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.publication-image {
+  padding: 0px;
+  width: 35%;
+  vertical-align: middle;
+}
+
+.publication-content {
+  padding: 20px;
+  width: 65%;
+  vertical-align: middle;
+}
+
+.profile-video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.social-link {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.social-icon {
+  height: 25px;
+  vertical-align: middle;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.experience-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-date {
+  margin-left: auto;
+  float: right;
+  color: gray;
+}
+
+.experience-note {
+  color: gray;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: small;
+  color: gray;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.heading-margin {
+  display: block;
+  margin-bottom: 24px;
+}
+
+/* 桌面端隐藏移动端的profile容器 */
+.mobile-profile-container {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* 主容器在移动端的调整 */
+  .main-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  /* 个人资料行在移动端变为垂直布局 */
+  .profile-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-row td {
+    display: block;
+    width: 100%;
+    order: 0;
+  }
+
+  /* 个人资料部分在移动端的调整 */
+  .profile-section {
+    width: 100%;
+    padding: 15px;
+    display: block;
+    order: 1;
+  }
+
+  .profile-image-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    order: 2;
+  }
+
+  /* 移动端头像容器调整 - 缩小20% */
+  .profile-container {
+    width: 160px; /* 从200px缩小20%到160px */
+    margin: 20px auto !important;
+  }
+
+  /* 移动端专用的profile尺寸 */
+  .mobile-profile-size {
+    width: 160px !important;
+    margin: 20px auto !important;
+  }
+
+  /* 移动端专用的profile容器 */
+  .mobile-profile-container {
+    display: block !important;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  /* 移动端隐藏桌面端的profile */
+  .profile-image-section {
+    display: none !important;
+  }
+
+  /* 移动端名字字体调整 */
+  name {
+    font-size: 32px;
+  }
+
+  name:hover {
+    font-size: 36px;
+  }
+
+  /* 移动端标题调整 */
+  heading {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  /* 修复experience标题的居中问题 */
+  .heading-margin {
+    text-align: left;
+  }
+
+  /* 移动端段落调整 */
+  .section-padding {
+    padding: 15px;
+  }
+
+  /* 移动端发表论文部分 - 垂直布局 */
+  .publication-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .publication-image {
+    width: 100%;
+    padding: 0; /* 移除padding让图片能占满宽度 */
+    text-align: center;
+    display: block !important;
+  }
+
+  .publication-image img {
+    width: 100%; /* 图片宽度占满页面宽度 */
+    max-width: 100%;
+    height: auto;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .publication-content {
+    width: 100%;
+    padding: 15px; /* 文字部分保持适当的边距 */
+  }
+
+  /* 移动端经历部分 - 保持与电脑端一样 */
+  .experience-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .experience-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+
+  .experience-content {
+    flex: 1;
+  }
+
+  .experience-date {
+    margin-left: auto;
+    float: right;
+    color: gray;
+  }
+
+  /* 移动端菜单调整 */
+  #menu {
+    margin-bottom: 20px;
+  }
+
+  #menu div {
+    width: 25%;
+    font-size: 12px;
+    padding: 8px 2px;
+  }
+
+  /* 移动端社交链接调整 */
+  .social-links {
+    margin-top: 20px;
+  }
+
+  .social-icon {
+    height: 30px;
+    margin: 0 8px;
+  }
+
+  /* 移动端年份分隔线调整 */
+  .year-divider {
+    padding: 15px 0;
+  }
+
+  .year-divider .year-label {
+    font-size: 12px;
+    padding: 0 8px;
+  }
+
+  /* 移动端表格调整 */
+  .content-table {
+    width: 100%;
+  }
+
+  /* 移动端字体大小调整 */
+  body, td, th, tr, p, a {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  papertitle {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  /* 移动端按钮和链接调整 */
+  .social-link {
+    margin-right: 8px;
+  }
+
+  /* 移动端预览图片调整 */
+  .section-padding img[src="src/img/preview.png"] {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* 针对更小屏幕的调整 */
+@media screen and (max-width: 480px) {
+  .main-container {
+    padding: 0 5px;
+  }
+
+  .profile-section, .profile-image-section {
+    padding: 10px;
+  }
+
+  .section-padding {
+    padding: 10px;
+  }
+
+  name {
+    font-size: 28px;
+  }
+
+  name:hover {
+    font-size: 32px;
+  }
+
+  heading {
+    font-size: 18px;
+  }
+
+  body, td, th, tr, p, a {
+    font-size: 12px;
+  }
+
+  papertitle {
+    font-size: 14px;
+  }
+
+  #menu div {
+    font-size: 11px;
+    padding: 6px 1px;
+  }
+
+  .experience-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .experience-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+
+  .profile-container {
+    width: 120px; /* 480px断点下进一步缩小 */
+  }
+
+  .mobile-profile-size {
+    width: 120px !important;
+  }
+
+  .social-icon {
+    height: 25px;
+    margin: 0 6px;
+  }
+
+  /* 小屏幕时论文图片占满宽度 */
+  .publication-image {
+    padding: 0 !important;
+    display: block !important;
+    text-align: center !important;
+  }
+
+  .publication-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+}
