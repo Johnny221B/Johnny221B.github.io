@@ -107,7 +107,7 @@ heading {
   text-decoration-style: solid;
   -webkit-text-decoration-color: #97413a;
   text-decoration-color: #97413a; /* #ac715b; */
-  font-weight: 700
+  font-weight: 500
 }
 
 papertitle {
@@ -120,7 +120,7 @@ name {
   font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 40px;
   transition: all 1s;
-  font-variation-settings: "wght" 200, "ital" 0;
+  font-variation-settings: "wght" 300, "ital" 0;
   text-align: center;
   color: #000000;
 }
@@ -317,8 +317,8 @@ font-weight: 600;
 
 .year-divider hr {
   border: none;
-  height: 1px;
-  background-color: #ddd;
+  height: 2px; /* 稍微增加线条粗细 */
+  background: linear-gradient(90deg, transparent, #ddd, transparent); /* 渐变线条 */
   margin: 0;
 }
 
