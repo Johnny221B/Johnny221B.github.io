@@ -390,7 +390,7 @@ font-weight: 600;
 }
 
 .profile-section {
-  padding: 2.5%;
+  padding: 0 10px; /* 为个人简介添加小的左右margin */
   width: 60%;
   vertical-align: middle;
 }
@@ -402,19 +402,20 @@ font-weight: 600;
 }
 
 .section-padding {
-  padding: 20px;
+  padding: 0 10px; /* 为文字内容添加小的左右margin */
   width: 100%;
   vertical-align: middle;
 }
 
 .publication-image {
   padding: 0px;
+  padding-right: 10px; /* 图片右侧添加小间隔 */
   width: 35%;
   vertical-align: middle;
 }
 
 .publication-content {
-  padding: 20px;
+  padding: 0 10px; /* 文字内容左右添加小margin */
   width: 65%;
   vertical-align: middle;
 }
@@ -594,13 +595,14 @@ font-weight: 600;
 
   .publication-image {
     width: 100%;
-    padding: 0; /* 移除padding让图片能占满宽度 */
+    padding: 0 10px; /* 图片左右保持小margin */
+    padding-bottom: 10px; /* 图片下方添加小间隔 */
     text-align: center;
     display: block !important;
   }
 
   .publication-image img {
-    width: 100%; /* 图片宽度占满页面宽度 */
+    width: 100%; /* 图片宽度占满容器宽度 */
     max-width: 100%;
     height: auto;
     display: block !important;
@@ -609,7 +611,7 @@ font-weight: 600;
 
   .publication-content {
     width: 100%;
-    padding: 15px; /* 文字部分保持适当的边距 */
+    padding: 10px; /* 文字内容四周添加小margin，方便阅读 */
   }
 
   /* 移动端经历部分 - 保持与电脑端一样 */
@@ -761,7 +763,8 @@ font-weight: 600;
 
   /* 小屏幕时论文图片占满宽度 */
   .publication-image {
-    padding: 0 !important;
+    padding: 0 8px !important; /* 小屏幕时稍微减少左右margin */
+    padding-bottom: 8px !important; /* 图片下方添加小间隔 */
     display: block !important;
     text-align: center !important;
   }
@@ -770,5 +773,11 @@ font-weight: 600;
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
+  }
+
+  /* 小屏幕时论文文字内容也占满宽度，和图片一样 */
+  .publication-content {
+    width: 100% !important;
+    padding: 8px !important; /* 小屏幕时文字内容四周添加小margin */
   }
 }
