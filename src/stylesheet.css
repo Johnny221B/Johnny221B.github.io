@@ -107,13 +107,13 @@ heading {
   text-decoration-style: solid;
   -webkit-text-decoration-color: #97413a;
   text-decoration-color: #97413a; /* #ac715b; */
-  font-weight: 500
+  font-weight: 500;
 }
 
 papertitle {
   font-family: 'SF Pro', 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 16px;
-  font-weight: 750
+  font-size: 15px;
+  font-weight: 700;
 }
 
 name {
@@ -403,6 +403,8 @@ font-weight: 600;
 
 .section-padding {
   padding: 0 10px; /* 为文字内容添加小的左右margin */
+  padding-top: 20px; /* 增加section顶部间距 */
+  padding-bottom: 20px; /* 增加section底部间距 */
   width: 100%;
   vertical-align: middle;
 }
@@ -493,7 +495,8 @@ font-weight: 600;
 
 .heading-margin {
   display: block;
-  margin-bottom: 24px;
+  margin-top: 50px; /* 增加标题上方间距 */
+  margin-bottom: 30px; /* 增加标题下方间距 */
 }
 
 /* 桌面端隐藏移动端的profile容器 */
