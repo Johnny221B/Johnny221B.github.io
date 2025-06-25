@@ -425,6 +425,11 @@ font-weight: 600;
   vertical-align: middle;
 }
 
+.publication-content:hover {
+  background-color: #fef9e7bb; /* 淡黄色背景 */
+  transition: background-color 0.3s ease-in-out;
+}
+
 .profile-video {
   width: 100%;
   max-width: 100%;
