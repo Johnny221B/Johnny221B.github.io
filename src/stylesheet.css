@@ -396,26 +396,34 @@ font-weight: 600;
 
 /* Selected Publications样式 */
 .selected-pub-title {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .selected-pub-authors {
   font-size: 13px;
   color: #555;
+  margin-bottom: 3px;
+  margin-top: 3px;
 }
 
 .selected-pub-venue {
   font-size: 14px;
+  margin-bottom: 3px;
+  margin-top: 0;
 }
 
 .selected-pub-description {
   font-size: 14px;
   color: #666;
+  margin-bottom: 3px;
+  margin-top: 0;
 }
 
 .selected-pub-links {
   font-size: 14px;
+  margin-bottom: 15px;
+  margin-top: 0;
 }
 
 .zero-padding {
@@ -720,26 +728,7 @@ font-weight: 600;
     margin-right: auto;
   }
 
-  /* 移动端Selected Publications样式调整 */
-  .selected-pub-title {
-    font-size: 20px;
-  }
 
-  .selected-pub-authors {
-    font-size: 12px;
-  }
-
-  .selected-pub-venue {
-    font-size: 13px;
-  }
-
-  .selected-pub-description {
-    font-size: 13px;
-  }
-
-  .selected-pub-links {
-    font-size: 13px;
-  }
 
   /* 移动端字体大小调整 */
   body, td, th, tr, p, a {
@@ -849,26 +838,7 @@ font-weight: 600;
     padding: 8px !important; /* 小屏幕时文字内容四周添加小margin */
   }
 
-  /* 小屏幕Selected Publications样式调整 */
-  .selected-pub-title {
-    font-size: 19px;
-  }
 
-  .selected-pub-authors {
-    font-size: 11px;
-  }
-
-  .selected-pub-venue {
-    font-size: 12px;
-  }
-
-  .selected-pub-description {
-    font-size: 12px;
-  }
-
-  .selected-pub-links {
-    font-size: 12px;
-  }
 }
 
 /* 移动端字体优化 */
