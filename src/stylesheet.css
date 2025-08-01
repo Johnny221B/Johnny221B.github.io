@@ -321,7 +321,7 @@ font-weight: 600;
 .year-divider hr {
   border: none;
   height: 2px; /* 稍微增加线条粗细 */
-  background: linear-gradient(90deg, transparent, #ddd, transparent); /* 渐变线条 */
+  background: #ddd; /* 纯色线条 */
   margin: 0;
 }
 
@@ -386,6 +386,36 @@ font-weight: 600;
   border-collapse: separate;
   margin-right: auto;
   margin-left: auto;
+}
+
+/* Publications section内部的table应该左对齐 */
+#publications .content-table {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Selected Publications样式 */
+.selected-pub-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.selected-pub-authors {
+  font-size: 13px;
+  color: #555;
+}
+
+.selected-pub-venue {
+  font-size: 14px;
+}
+
+.selected-pub-description {
+  font-size: 14px;
+  color: #666;
+}
+
+.selected-pub-links {
+  font-size: 14px;
 }
 
 .zero-padding {
@@ -684,6 +714,33 @@ font-weight: 600;
     width: 100%;
   }
 
+  /* 移动端Publications section内部的table也应该左对齐 */
+  #publications .content-table {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  /* 移动端Selected Publications样式调整 */
+  .selected-pub-title {
+    font-size: 20px;
+  }
+
+  .selected-pub-authors {
+    font-size: 12px;
+  }
+
+  .selected-pub-venue {
+    font-size: 13px;
+  }
+
+  .selected-pub-description {
+    font-size: 13px;
+  }
+
+  .selected-pub-links {
+    font-size: 13px;
+  }
+
   /* 移动端字体大小调整 */
   body, td, th, tr, p, a {
     font-size: 13px;
@@ -790,6 +847,27 @@ font-weight: 600;
   .publication-content {
     width: 100% !important;
     padding: 8px !important; /* 小屏幕时文字内容四周添加小margin */
+  }
+
+  /* 小屏幕Selected Publications样式调整 */
+  .selected-pub-title {
+    font-size: 19px;
+  }
+
+  .selected-pub-authors {
+    font-size: 11px;
+  }
+
+  .selected-pub-venue {
+    font-size: 12px;
+  }
+
+  .selected-pub-description {
+    font-size: 12px;
+  }
+
+  .selected-pub-links {
+    font-size: 12px;
   }
 }
 
