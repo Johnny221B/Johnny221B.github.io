@@ -92,13 +92,13 @@ tr,
 p,
 a {
   font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 350
 }
 
 b {
   font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -741,7 +741,7 @@ font-weight: 600;
 
   /* 移动端字体大小调整 */
   body, td, th, tr, p, a {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.5;
   }
 
@@ -790,7 +790,7 @@ font-weight: 600;
   }
 
   body, td, th, tr, p, a {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   papertitle {
