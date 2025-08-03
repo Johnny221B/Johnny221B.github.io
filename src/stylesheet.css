@@ -854,6 +854,52 @@ font-weight: 600;
 
 }
 
+/* News section styles */
+.news-container {
+  margin-top: 10px;
+}
+
+.news-visible p,
+.news-hidden p {
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.news-toggle-arrow {
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #97413a;
+  margin-top: 8px;
+  padding: 4px;
+  transition: all 0.3s ease;
+  user-select: none;
+  letter-spacing: 2px;
+}
+
+.news-toggle-arrow:hover {
+  color: #313164;
+  transform: scale(1.2);
+}
+
+.news-hidden {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Mobile responsive for news arrow */
+@media screen and (max-width: 768px) {
+  .news-toggle-arrow {
+    font-size: 15px;
+    padding: 3px;
+    margin-top: 6px;
+  }
+}
+
 /* 移动端字体优化 */
 @media screen and (max-width: 768px) {
   /* 确保移动端使用圆润字体 */

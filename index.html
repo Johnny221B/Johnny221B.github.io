@@ -24,6 +24,22 @@
       gtag("js", new Date());
       gtag("config", "G-YE837RNHM5");
     </script>
+    
+    <!-- News toggle functionality -->
+    <script>
+      function toggleNews() {
+        const moreNews = document.getElementById('moreNews');
+        const toggleBtn = document.getElementById('newsToggleBtn');
+        
+        if (moreNews.style.display === 'none') {
+          moreNews.style.display = 'block';
+          toggleBtn.innerHTML = '−';
+        } else {
+          moreNews.style.display = 'none';
+          toggleBtn.innerHTML = '•••';
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -59,6 +75,9 @@
                         <a href='https://github.com/TobyYang7' class="social-link">
                           <img src="./src/logo/github.svg" alt="GitHub" class="social-icon">
                         </a>
+                        <a href='https://www.linkedin.com/in/tobyyang7/' class="social-link">
+                          <img src="./src/logo/linkedin.svg" alt="LinkedIn" class="social-icon">
+                        </a>
                         <a href='https://x.com/Toby_Yang_7' style="text-decoration: none;">
                           <img src="./src/logo/x.svg" alt="Twitter/X" class="social-icon">
                         </a>
@@ -81,21 +100,6 @@
                       <a href="https://sds.cuhk.edu.cn/en/teacher/268"
                         >Prof. Jianfeng Mao</a
                       >.
-                    </p>
-                    <p>
-                      My vision is to build reliable and trustworthy AI systems
-                      that bridge the gap between machines and the real world.
-                      My focus is on enabling (vision) language model to
-                      interact more reliable with humans and their environments,
-                      empowering them to understand and simulate the underlying
-                      principles of the world. Additionally, I strive to uncover
-                      the internal mechanisms of language model to demystify
-                      their "black-box" nature, making AI system more interpretable,
-                      transparent, and aligned with human values. Through my
-                      research, I hope to contribute to the development of AI
-                      systems that are not only intelligent but also
-                      responsible, ethical, and deeply integrated into our daily
-                      lives.
                     </p>
                     <p>
                       <b>Currently, I am seeking a PhD position (2026 Fall).</b>
@@ -149,6 +153,9 @@
                     <a href='https://github.com/TobyYang7' class="social-link">
                       <img src="./src/logo/github.svg" alt="GitHub" class="social-icon">
                     </a>
+                    <a href='https://www.linkedin.com/in/tobyyang7/' class="social-link">
+                      <img src="./src/logo/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
                     <a href='https://x.com/Toby_Yang_7' style="text-decoration: none;">
                       <img src="./src/logo/x.svg" alt="Twitter/X" class="social-icon">
                     </a>
@@ -170,16 +177,21 @@
                 <tr>
                   <td class="section-padding">
                     <heading>News</heading>
-                    <p>
-                      <b>06/2025</b>: One paper (FDPT) was accepted to <i><a href="https://iccv.thecvf.com/">ICCV 2025</a></i>. See you in Hawaii! 🌴<br>
-                      <b>05/2025</b>: Invited talk at <a href="https://mp.weixin.qq.com/s/fGJvmUHTk5dDzOhLdHsv_Q">Wisemodel.cn</a> (Special Session by FreedomAI Team in CUHK-Shenzhen).<br>
-                      <b>04/2025</b>: <a href="https://tobyyang7.github.io/TwinMarket">TwinMarket</a> won the <a href="./src/img/best_paper.jpg"><b>Best Paper Award 🏆</b></a> at the <i><a href="https://sites.google.com/view/financialaiiclr25/home">Advances in Financial AI Workshop</a> @ ICLR 2025</i>.<br>
-                      <b>04/2025</b>: Invited talk at the <i><a href="https://sites.google.com/view/financialaiiclr25/home">Advances in Financial AI Workshop</a> @ ICLR 2025</i> and NUS in Singapore 🇸🇬.<br>
-                      <b>02/2025</b>: Our new work on socio-economic simulation, <a href="https://tobyyang7.github.io/TwinMarket">TwinMarket</a>, has been released.<br>
-                      <b>01/2025</b>: One paper <a href="https://arxiv.org/abs/2410.14059">(UCFE-Benchmark)</a> was accepted to <i><a href="https://2025.naacl.org/">Findings of NAACL 2025</a></i>.<br>
-                      <b>08/2024</b>: A financial foundation model, <a href="https://huggingface.co/TheFinAI/FinLLaMA-instruct">FinLLaMA-8B</a>, and a multimodal model, <a href="https://huggingface.co/TheFinAI/FinLLaVA">FinLLaVA-8B</a>, were released.<br>
-                      <b>03/2024</b>: My first publication <a href="https://www.sciencedirect.com/science/article/abs/pii/S1566253524001040?via%3Dihub">(FAST-CA)</a> was accepted to <i>Information Fusion 2024</i>.
-                    </p>
+                    <div class="news-container">
+                      <div class="news-visible">
+                        <p><b>06/2025</b>: One paper (FDPT) was accepted to <i><a href="https://iccv.thecvf.com/">ICCV 2025</a></i>. See you in Hawaii! 🌴</p>
+                        <p><b>05/2025</b>: Invited talk at <a href="https://mp.weixin.qq.com/s/fGJvmUHTk5dDzOhLdHsv_Q">Wisemodel.cn</a> (Special Session by FreedomAI Team in CUHK-Shenzhen).</p>
+                        <p><b>04/2025</b>: <a href="https://tobyyang7.github.io/TwinMarket">TwinMarket</a> won the <a href="./src/img/best_paper.jpg"><b>Best Paper Award 🏆</b></a> at the <i><a href="https://sites.google.com/view/financialaiiclr25/home">Advances in Financial AI Workshop</a> @ ICLR 2025</i>.</p>
+                      </div>
+                      <div class="news-hidden" id="moreNews" style="display: none;">
+                        <p><b>04/2025</b>: Invited talk at the <i><a href="https://sites.google.com/view/financialaiiclr25/home">Advances in Financial AI Workshop</a> @ ICLR 2025</i> and NUS in Singapore 🇸🇬.</p>
+                        <p><b>02/2025</b>: Our new work on socio-economic simulation, <a href="https://tobyyang7.github.io/TwinMarket">TwinMarket</a>, has been released.</p>
+                        <p><b>01/2025</b>: One paper <a href="https://arxiv.org/abs/2410.14059">(UCFE-Benchmark)</a> was accepted to <i><a href="https://2025.naacl.org/">Findings of NAACL 2025</a></i>.</p>
+                        <p><b>08/2024</b>: A financial foundation model, <a href="https://huggingface.co/TheFinAI/FinLLaMA-instruct">FinLLaMA-8B</a>, and a multimodal model, <a href="https://huggingface.co/TheFinAI/FinLLaVA">FinLLaVA-8B</a>, were released.</p>
+                        <p><b>03/2024</b>: My first publication <a href="https://www.sciencedirect.com/science/article/abs/pii/S1566253524001040?via%3Dihub">(FAST-CA)</a> was accepted to <i>Information Fusion 2024</i>.</p>
+                      </div>
+                      <div class="news-toggle-arrow" onclick="toggleNews()" id="newsToggleBtn">•••</div>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -195,6 +207,21 @@
                       Previously, my research was focused on:<br />
                       <b>(1) Language Model:</b> Human-AI Interaction <a href="https://arxiv.org/abs/2410.14059">(UCFE-Benchmark)</a>, Agent System <a href="https://tobyyang7.github.io/TwinMarket">(TwinMarket)</a>, AI for Scientific Applications <a href="https://arxiv.org/abs/2408.11878">(Open-FinLLMs)</a>, Trustworthy NLP <a href="https://arxiv.org/abs/2505.15634">(SAE-free)</a><br />
                       <b>(2) Data Mining:</b> Spatial-Temporal Modeling <a href="https://www.sciencedirect.com/science/article/abs/pii/S1566253524001040?via%3Dihub">(FAST-CA)</a>, Social Computing
+                    </p>
+                    <p>
+                      My vision is to build reliable and trustworthy AI systems
+                      that bridge the gap between machines and the real world.
+                      My focus is on enabling (vision) language model to
+                      interact more reliable with humans and their environments,
+                      empowering them to understand and simulate the underlying
+                      principles of the world. Additionally, I strive to uncover
+                      the internal mechanisms of language model to demystify
+                      their "black-box" nature, making AI system more interpretable,
+                      transparent, and aligned with human values. Through my
+                      research, I hope to contribute to the development of AI
+                      systems that are not only intelligent but also
+                      responsible, ethical, and deeply integrated into our daily
+                      lives.
                     </p>
                   </td>
                 </tr>
