@@ -241,6 +241,8 @@ span.badge {
     margin-bottom: 30px;
     border-top: 1px solid #999;
     border-bottom: 1px solid #999;
+    padding: 0 10px; /* 添加左右内边距以与内容区域对齐 */
+    box-sizing: border-box; /* 确保padding不会增加总宽度 */
 }
 
 /* Individual menu items */
@@ -431,15 +433,22 @@ font-weight: 600;
 }
 
 .profile-section {
-  padding: 0px; /* 为个人简介添加小的左右margin */
-  width: 60%;
+  padding: 0 10px; /* 减少左右内边距 */
+  padding-right: 15px; /* 右侧稍微多一点间距，但整体更紧凑 */
+  width: 75%;
   vertical-align: middle;
 }
 
 .profile-image-section {
   padding: 0;
-  width: 5%;
-  max-width: 5%;
+  padding-left: 5px; /* 进一步减少左侧间距 */
+  width: 25%;
+  max-width: 25%;
+}
+
+/* 桌面端头像容器位置优化 */
+.profile-image-section .profile-container {
+  margin-top: 15px !important; /* 减少顶部间距，与文字更好对齐 */
 }
 
 .section-padding {
@@ -478,8 +487,7 @@ font-weight: 600;
 .profile-img {
   width: auto;
   max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .social-links {
@@ -580,7 +588,7 @@ font-weight: 600;
   .profile-image-section {
     width: 100%;
     max-width: 100%;
-    padding: 15px;
+    padding: 10px 15px; /* 减少上下间距 */
     display: block;
     text-align: center;
     order: 2;
@@ -589,7 +597,7 @@ font-weight: 600;
   /* 移动端头像容器调整 - 缩小20% */
   .profile-container {
     width: 200px; /* 从160px增加到200px */
-    margin: 20px auto !important;
+    margin: 15px auto !important; /* 减少上下间距 */
   }
 
   /* 移动端专用的profile尺寸 */
@@ -602,7 +610,7 @@ font-weight: 600;
   .mobile-profile-container {
     display: block !important;
     text-align: center;
-    margin: 20px 0;
+    margin: 15px 0; /* 减少上下间距 */
   }
 
   /* 移动端隐藏桌面端的profile */
@@ -689,6 +697,7 @@ font-weight: 600;
   /* 移动端菜单调整 */
   #menu {
     margin-bottom: 20px;
+    padding: 0 15px; /* 移动端使用与section-padding一致的15px内边距 */
   }
 
   #menu div {
@@ -786,6 +795,10 @@ font-weight: 600;
 
   papertitle {
     font-size: 14px;
+  }
+
+  #menu {
+    padding: 0 10px; /* 小屏幕时使用与section-padding一致的10px内边距 */
   }
 
   #menu div {
