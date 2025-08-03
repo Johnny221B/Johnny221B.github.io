@@ -431,15 +431,15 @@ font-weight: 600;
 }
 
 .profile-section {
-  padding: 0 10px; /* 为个人简介添加小的左右margin */
+  padding: 0px; /* 为个人简介添加小的左右margin */
   width: 60%;
   vertical-align: middle;
 }
 
 .profile-image-section {
-  padding: 0.1%;
-  width: 25%;
-  max-width: 30%;
+  padding: 0;
+  width: 5%;
+  max-width: 5%;
 }
 
 .section-padding {
@@ -476,15 +476,15 @@ font-weight: 600;
 }
 
 .profile-img {
-  width: 100%;
+  width: auto;
   max-width: 100%;
-  border-radius: 50%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .social-links {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .social-link {
@@ -588,13 +588,13 @@ font-weight: 600;
 
   /* 移动端头像容器调整 - 缩小20% */
   .profile-container {
-    width: 160px; /* 从200px缩小20%到160px */
+    width: 200px; /* 从160px增加到200px */
     margin: 20px auto !important;
   }
 
   /* 移动端专用的profile尺寸 */
   .mobile-profile-size {
-    width: 160px !important;
+    width: 200px !important;
     margin: 20px auto !important;
   }
 
