@@ -434,7 +434,7 @@ font-weight: 600;
 
 .profile-section {
   padding: 0 10px; /* 减少左右内边距 */
-  padding-right: 15px; /* 右侧稍微多一点间距，但整体更紧凑 */
+  padding-right: 5px; /* 右侧稍微多一点间距，但整体更紧凑 */
   width: 75%;
   vertical-align: middle;
 }
