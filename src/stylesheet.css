@@ -91,19 +91,19 @@ th,
 tr,
 p,
 a {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   font-weight: 350
 }
 
 b {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
 }
 
 heading {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 22px;
   /*color: #313164;*/
   text-decoration: underline;
@@ -114,13 +114,13 @@ heading {
 }
 
 papertitle {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 15px;
   font-weight: 700;
 }
 
 name {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 40px;
   transition: all 1s;
   font-variation-settings: "wght" 300, "ital" 0;
@@ -145,7 +145,7 @@ name {
 /* 3. Aurora 渐变 Hover 版 */
 name:hover {
   /* 字体 ▸ 斜体/字重随个人口味调整 */
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 45px;
   font-variation-settings: "wght" 1200, "ital" 0;
 
@@ -181,7 +181,7 @@ name:hover {
 }
 
 name-normal {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 40px;
   transition: all 1s;
   -webkit-text-stroke: 1px #000000;
@@ -192,7 +192,7 @@ name-normal {
 }
 
 name-normal:hover {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-variation-settings: "wght" 700, "ital" 1;
   -webkit-text-stroke: 0px #000000;
 }
@@ -238,7 +238,7 @@ span.badge {
 #menu {
     display: table;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border-top: 1px solid #999;
     border-bottom: 1px solid #999;
     padding: 0 10px; /* 添加左右内边距以与内容区域对齐 */
@@ -286,10 +286,10 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 15px 0;
+padding: 8px 0;
 border-top: 1px solid #ddd;
 border-bottom: 1px solid #ddd;
-margin: 20px 0;
+margin: 10px 0;
 }
 
 .menu-item {
@@ -453,8 +453,8 @@ font-weight: 600;
 
 .section-padding {
   padding: 0 10px; /* 为文字内容添加小的左右margin */
-  padding-top: 20px; /* 增加section顶部间距 */
-  padding-bottom: 20px; /* 增加section底部间距 */
+  padding-top: 10px; /* 减少section顶部间距 */
+  padding-bottom: 10px; /* 减少section底部间距 */
   width: 100%;
   vertical-align: middle;
 }
@@ -549,8 +549,8 @@ font-weight: 600;
 
 .heading-margin {
   display: block;
-  margin-top: 50px; /* 增加标题上方间距 */
-  margin-bottom: 30px; /* 增加标题下方间距 */
+  margin-top: 25px; /* 减少标题上方间距 */
+  margin-bottom: 15px; /* 减少标题下方间距 */
 }
 
 /* 桌面端隐藏移动端的profile容器 */
@@ -641,7 +641,7 @@ font-weight: 600;
 
   /* 移动端段落调整 */
   .section-padding {
-    padding: 15px;
+    padding: 8px;
   }
 
   /* 移动端发表论文部分 - 垂直布局 */
@@ -856,9 +856,9 @@ font-weight: 600;
 
 /* 移动端字体优化 */
 @media screen and (max-width: 768px) {
-  /* 确保移动端使用系统字体 */
+  /* 确保移动端使用圆润字体 */
   body, td, th, tr, p, a, b, heading, papertitle, name, name-normal {
-    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
