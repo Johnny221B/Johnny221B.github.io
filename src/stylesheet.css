@@ -115,7 +115,7 @@ heading {
 
 papertitle {
   font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
 }
 
@@ -746,7 +746,7 @@ font-weight: 600;
   }
 
   papertitle {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.4;
   }
 
@@ -794,7 +794,7 @@ font-weight: 600;
   }
 
   papertitle {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   #menu {
