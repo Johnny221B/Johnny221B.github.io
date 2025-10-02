@@ -40,6 +40,10 @@
         }
       }
     </script>
+    <style>
+      /* Smaller font for emails */
+      #email code { font-size: 90%; }
+    </style>
   </head>
 
   <body>
@@ -102,7 +106,7 @@
                       >.
                     </p>
                     <p>
-                      I have published several papers at top-tier conferences including NeurIPS, EMNLP, NAACL, ICCV, and received the Best Paper Award at ICLR workshop. My research spans multiple areas with a focus on: <b>Human-AI Interaction <a href="https://arxiv.org/abs/2410.14059">(UCFE-Benchmark)</a>, Multi-Agent System <a href="https://tobyyang7.github.io/TwinMarket">(TwinMarket)</a>, AI for Scientific Applications <a href="https://arxiv.org/abs/2408.11878">(Open-FinLLMs)</a>, Trustworthy NLP <a href="https://arxiv.org/abs/2505.15634">(SAE-free)</a>, and Socially Aware NLP.</b>
+                      I have published several papers at top-tier conferences including <i>NeurIPS, EMNLP, NAACL, ICCV</i>, and received the Best Paper Award at <i>ICLR Workshop</i>. My research spans multiple areas with a focus on: <b>Human-AI Interaction <a href="https://arxiv.org/abs/2410.14059">(UCFE-Benchmark)</a>, Multi-Agent System <a href="https://tobyyang7.github.io/TwinMarket">(TwinMarket)</a>, AI for Scientific Applications <a href="https://arxiv.org/abs/2408.11878">(Open-FinLLMs)</a>, Trustworthy NLP <a href="https://arxiv.org/abs/2505.15634">(SAE-free)</a>, and Socially Aware NLP.</b>
                     </p>
                     <p>
                       <b>Currently, I am seeking a PhD position (2026 Fall).</b>
@@ -134,6 +138,20 @@
                       a.href = link;
                       a.innerHTML = `<code>${email}</code>`;
                       document.getElementById("email").appendChild(a);
+                      
+                      // Add second email: yuzheyang@ucsb.edu
+                      const user2 = "yuzheyang";
+                      const domain2 = "ucsb.edu";
+                      const email2 = user2 + "@" + domain2;
+                      const link2 = "mailto:" + email2;
+                      
+                      const sep = document.createTextNode(" / ");
+                      document.getElementById("email").appendChild(sep);
+                      
+                      const a2 = document.createElement("a");
+                      a2.href = link2;
+                      a2.innerHTML = `<code>${email2}</code>`;
+                      document.getElementById("email").appendChild(a2);
                     </script>
                     <br />
                     <br />
@@ -170,7 +188,7 @@
             <div id="menu">
               <div><a href="publications.html">Publications</a></div>
               <div><a href="#experience">Experiences</a></div>
-              <div><a href="./src/pdf/yuzhe_cv.pdf">CV</a></div>
+              <div><a href="./src/pdf/yuzhe_cv.pdf">Curriculum Vitae</a></div>
               <div><a href="https://tobyyang7.github.io/photo/">Gallery</a></div>
             </div>
 
