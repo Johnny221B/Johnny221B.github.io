@@ -2,51 +2,69 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
+USER_SCHOLAR_ID = "IFBha3gAAAAJ"  
+INDEX_FILE = "index.html"            
+TIMEOUT = 12
+
 
 def update_citation_badge():
-    # 您的谷歌学术 ID
-    SCHOLAR_ID = "Oj296F8AAAAJ"
-
-    # 请求头，模拟浏览器
+    url = f"https://scholar.google.com/citations?user={USER_SCHOLAR_ID}&hl=en"
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                       "AppleWebKit/537.36 (KHTML, like Gecko) "
+                       "Chrome/123.0.0.0 Safari/537.36")
     }
 
-    # 发送请求
-    url = f"https://scholar.google.com/citations?user={SCHOLAR_ID}&hl=en"
     try:
-        response = requests.get(url, headers=headers, timeout=10)
-        response.raise_for_status()
+        resp = requests.get(url, headers=headers, timeout=TIMEOUT)
+        resp.raise_for_status()
     except Exception as e:
-        print(f"Error fetching data: {e}")
+        print(f"[ERR] Fetch scholar page failed: {e}")
         return False
 
-    # 解析 HTML 获取引用数
-    soup = BeautifulSoup(response.text, 'html.parser')
-    citation_stats = soup.select('td.gsc_rsb_std')
-    if len(citation_stats) >= 1:
-        total_citations = citation_stats[0].text
-    else:
-        print("Failed to find citation count")
+    soup = BeautifulSoup(resp.text, "html.parser")
+    cells = soup.select("td.gsc_rsb_std")
+    if not cells:
+        print("[ERR] Cannot find citation cells on page.")
+        return False
+    total_citations = cells[0].get_text(strip=True)
+
+    try:
+        with open(INDEX_FILE, "r", encoding="utf-8") as f:
+            content = f.read()
+    except Exception as e:
+        print(f"[ERR] Read {INDEX_FILE} failed: {e}")
         return False
 
-    # 更新 index.html 中的徽章
-    with open('index.html', 'r', encoding='utf-8') as file:
-        content = file.read()
+    badge = (
+        f"<a href='https://scholar.google.com/citations?user={USER_SCHOLAR_ID}'>\n"
+        f'  <img src="https://img.shields.io/badge/Google%20Scholar-{total_citations}-blue'
+        f'?logo=Google%20Scholar&style=flat&labelColor=f6f6f6&color=9cf">\n'
+        f"</a>"
+    )
 
-    # 使用正则表达式替换徽章
-    # 这里保持 "Google Scholar" 作为左侧文本，引用数作为右侧
-    new_badge = f'<a href=\'https://scholar.google.com/citations?user=Oj296F8AAAAJ\'>\n  <img src="https://img.shields.io/badge/Google%20Scholar-{total_citations}-blue?logo=Google%20Scholar&style=flat&labelColor=f6f6f6&color=9cf">\n</a>'
-    pattern = r'<a href=\'https://scholar\.google\.com/citations\?user=Oj296F8AAAAJ\'>\s*<img[^>]*>\s*</a>'
+    id_escaped = re.escape(USER_SCHOLAR_ID)
+    pattern = rf"<a href=['\"]https://scholar\.google\.com/citations\?user={id_escaped}['\"]>\s*<img[^>]*>\s*</a>"
 
-    updated_content = re.sub(pattern, new_badge, content)
+    if not re.search(pattern, content, flags=re.S):
+        pattern = r"<a href=['\"]https://scholar\.google\.com/citations\?user=[^'\"\s]+['\"]>\s*<img[^>]*>\s*</a>"
 
-    # 写回文件
-    with open('index.html', 'w', encoding='utf-8') as file:
-        file.write(updated_content)
+    new_content, n = re.subn(pattern, badge, content, flags=re.S)
+    if n == 0:
+        print("[WARN] No existing badge matched. Will append a new badge at placeholder <!--SCHOLAR_BADGE--> if present.")
+        # 可选：如果页面里有占位注释，就在那插入；否则不处理
+        if "<!--SCHOLAR_BADGE-->" in content:
+            new_content = content.replace("<!--SCHOLAR_BADGE-->", badge)
+            n = 1
 
-    print(f"Updated citation badge to {total_citations} citations")
-    return True
+    if n > 0:
+        with open(INDEX_FILE, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        print(f"[OK] Updated citation badge → {total_citations}")
+        return True
+
+    print("[ERR] Did not replace or insert badge.")
+    return False
 
 
 if __name__ == "__main__":
