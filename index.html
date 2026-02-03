@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Jingxuan Wu</title>
+    <meta name="author" content="Jingxuan Wu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="src/stylesheet.css" />
+    <link rel="icon" href="./src/logo/unc.png" type="image/x-icon" />
+    <!-- Google Fonts for handwriting style and rounded fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Google Analytics -->
+    <!-- <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YE837RNHM5"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-YE837RNHM5");
+    </script> -->
+    
+    <!-- News toggle functionality -->
+    <script>
+      function toggleNews() {
+        const moreNews = document.getElementById('moreNews');
+        const toggleBtn = document.getElementById('newsToggleBtn');
+        
+        if (moreNews.style.display === 'none') {
+          moreNews.style.display = 'block';
+          toggleBtn.innerHTML = '−';
+        } else {
+          moreNews.style.display = 'none';
+          toggleBtn.innerHTML = '•••';
+        }
+      }
+    </script>
+    <style>
+      /* Smaller font for emails */
+      #email code { font-size: 90%; }
+    </style>
+  </head>
+
+  <body>
+    <table class="main-container">
+      <tbody>
+        <tr class="zero-padding">
+          <td class="zero-padding">
+            <table class="content-table">
+              <tbody>
+                <tr class="zero-padding profile-row">
+                  <td class="profile-section">
+                    <p class="text-center">
+                      <!-- <name>Yuzhe</name> <name-normal>(Toby)</name-normal> <name>Yang</name>  -->
+                      <name>Jingxuan(Johnny) Wu</name>
+                    </p>
+                    
+                    <!-- Mobile Profile Image - Only visible on mobile -->
+                    <div class="mobile-profile-container">
+                      <div class="profile-container mobile-profile-size">
+                        <img class="profile-img" src="./src/img/ai_image.png" />
+                      </div>
+                      
+                      <!-- Mobile Motto -->
+                      <div class="motto" style="text-align: center; margin-top: 5px; font-family: 'Dancing Script', cursive; font-size: 18px; font-weight: 500; color: #97413a;">
+                        Learning to Learn
+                      </div>
+                      
+                      <!-- Mobile Social Media Links -->
+                      <div class="social-links">
+                        <a href='https://scholar.google.com/citations?hl=zh-CN&user=IFBha3gAAAAJ' class="social-link">
+                          <img src="./src/logo/google-scholar.svg" alt="Google Scholar" class="social-icon">
+                        </a>
+                        <a href='https://github.com/Johnny221B' class="social-link">
+                          <img src="./src/logo/github.svg" alt="GitHub" class="social-icon">
+                        </a>
+                        <a href='https://www.linkedin.com/in/jingxuan-wu-877397287/' class="social-link">
+                          <img src="./src/logo/linkedin.svg" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href='https://x.com/BJohnny22153374' style="text-decoration: none;">
+                          <img src="./src/logo/x.svg" alt="Twitter/X" class="social-icon">
+                        </a>
+                      </div>
+                    </div>
+                    
+                    <p>
+                      Hi! I’m Jingxuan Wu (吴竟瑄). I am a master’s student in
+                      <a href="https://stor.unc.edu/"><b>Statistics &amp; Operations Research</b> at the University of North Carolina at Chapel Hill</a>,
+                      and I received my B.S. from
+                      <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a>.
+                      Since my undergraduate years at CUHK-Shenzhen, I have been fortunate to be advised by
+                      <a href="https://gtchen430.github.io/"><b>Prof. Guanting Chen</b></a> at
+                      <a href="https://www.unc.edu/"><b>UNC–Chapel Hill</b></a> and
+                      <a href="https://xiaocheng-li.github.io/"><b>Prof. Xiaocheng Li</b></a> at
+                      <a href="https://www.imperial.ac.uk/"><b>Imperial College London</b></a>, and I continue to collaborate with them during my master's.
+                      In <b>2025</b>, I began working with
+                      <a href="https://xingruiyu.github.io/"><b>Prof. Xingrui Yu</b></a> and
+                      <a href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang"><b>Prof. Ivor Tsang</b></a> at
+                      <a href="https://www.a-star.edu.sg/"><b>A*STAR</b></a>.
+                      Previously, I also worked with
+                      <a href="https://sds.cuhk.edu.cn/en/teacher/268"><b>Prof. Jianfeng Mao</b></a>.
+                    </p>
+                    <!-- <p>
+                      I have published several papers at top-tier conferences including <i>NeurIPS, EMNLP, NAACL, ICCV</i>, and received the Best Paper Award at <i>ICLR Workshop</i>. My research spans multiple areas with a focus on: <b>Human-AI Interaction <a href="https://arxiv.org/abs/2410.14059">(UCFE-Benchmark)</a>, Agent <a href="https://arxiv.org/abs/2510.05571">(EvoPresent)</a>, AI for Scientific Applications <a href="https://arxiv.org/abs/2408.11878">(Open-FinLLMs)</a>, Trustworthy NLP <a href="https://arxiv.org/abs/2505.15634">(SAE-free)</a>, and Socially Aware NLP <a href="https://arxiv.org/abs/2502.01506">(TwinMarket)</a>.</b>
+                    </p> -->
+                    <p>
+                      <b>I am currently seeking 2026 summer research opportunities and Ph.D. positions for Fall 2027.</b>
+                      I’m also open to research collaborations. If you’re interested in my work, please contact me directly
+                      via the email listed below.
+                    </p>
+                    <b>Email:</b>
+                    <span id="email"></span>
+                    <script>
+                      const emailDiv = document.getElementById("email");
+                      emailDiv.textContent = "";
+                    
+                      // Make the span behave like a block of text aligned after "Email:"
+                      emailDiv.style.display = "inline-block";
+                      emailDiv.style.verticalAlign = "top";
+                      emailDiv.style.marginLeft = "0.4em"; // space after "Email:"
+                    
+                      const code1 = document.createElement("code");
+                      code1.textContent = "jingxwu[at]unc[dot]edu";
+                      emailDiv.appendChild(code1);
+                    
+                      const preferred = document.createElement("span");
+                      preferred.textContent = " (preferred)";
+                      preferred.style.fontStyle = "italic";
+                      emailDiv.appendChild(preferred);
+                    
+                      emailDiv.appendChild(document.createElement("br"));
+                    
+                      const code2 = document.createElement("code");
+                      code2.textContent = "jingxuanwu[at]link[dot]cuhk[dot]edu[dot]cn";
+                      emailDiv.appendChild(code2);
+                    </script>
+
+                    <br />
+                    <br />
+                  </td>
+                  <td class="profile-image-section">
+                  <div class="profile-container" style="margin-top: 30px; width: 240px; margin-left: auto; margin-right: auto;">
+                    <img class="profile-img" src="./src/img/ai_image.png" />
+                  </div>
+                  
+                  <!-- Desktop Motto -->
+                  <div class="motto" style="text-align: center; margin-top: 0px; font-family: 'Dancing Script', cursive; font-size: 18px; font-weight: 500; color: #97413a;">
+                    Learning to Learn
+                  </div>
+                  
+                  <!-- Social Media Links -->
+                  <div class="social-links">
+                    <a href='https://scholar.google.com/citations?hl=zh-CN&user=IFBha3gAAAAJ' class="social-link">
+                      <img src="./src/logo/google-scholar.svg" alt="Google Scholar" class="social-icon">
+                    </a>
+                    <a href='https://github.com/Johnny221B' class="social-link">
+                      <img src="./src/logo/github.svg" alt="GitHub" class="social-icon">
+                    </a>
+                    <a href='https://www.linkedin.com/in/jingxuan-wu-877397287/' class="social-link">
+                      <img src="./src/logo/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href='https://x.com/BJohnny22153374' style="text-decoration: none;">
+                      <img src="./src/logo/x.svg" alt="Twitter/X" class="social-icon">
+                    </a>
+                  </div>
+                  </td>
+              </tbody>
+            </table>
+
+            <div id="menu">
+              <div><a href="publications.html">Publications</a></div>
+              <div><a href="#experience">Experiences</a></div>
+              <div><a href="./src/pdf/jingxuan_cv.pdf">Curriculum Vitae</a></div>
+            </div>
+
+            <!-- News Section -->
+            <!-- <table class="content-table">
+              <tbody>
+                <tr>
+                  <td class="section-padding">
+                    <heading>News</heading>
+                    <div class="news-container">
+                      <div class="news-visible">
+                        <p><b>09/2025:</b> One paper <a href="https://arxiv.org/abs/2502.01506">(TwinMarket)</a> was accepted to <i><a href="https://neurips.cc/Conferences/2025">NeurIPS 2025</a></i>. See you in San Diego! 🌊</p>
+                        <p><b>08/2025:</b> One paper <a href="https://arxiv.org/abs/2505.15634">(SAE-free)</a> was accepted to <i><a href="https://2025.emnlp.org/">EMNLP 2025</a></i>.</p>
+                        <p><b>06/2025:</b> One paper (FDPT) was accepted to <i><a href="https://iccv.thecvf.com/Conferences/2025">ICCV 2025</a></i>. See you in Hawaii! 🌴</p>
+                        <p><b>05/2025:</b> Invited talk at <a href="https://mp.weixin.qq.com/s/fGJvmUHTk5dDzOhLdHsv_Q">Wisemodel.cn</a> (Special Session by FreedomAI Team in CUHK-Shenzhen).</p>
+                        <p><b>04/2025:</b> <a href="https://arxiv.org/abs/2502.01506">TwinMarket</a> won the <a href="./src/img/best_paper.jpg"><b>Best Paper Award 🏆</b></a> at the <i><a href="https://sites.google.com/view/financialaiiclr25/home">Advances in Financial AI Workshop</a> @ ICLR 2025</i>.</p>
+                      </div>
+                      <div class="news-hidden" id="moreNews" style="display: none;">
+                        <p><b>04/2025:</b> Invited talk at the <i><a href="https://sites.google.com/view/financialaiiclr25/home">Advances in Financial AI Workshop</a> @ ICLR 2025</i> and NUS in Singapore 🇸🇬.</p>
+                        <p><b>02/2025:</b> Our new work on socio-economic simulation, <a href="https://arxiv.org/abs/2502.01506">TwinMarket</a>, has been released.</p>
+                        <p><b>01/2025:</b> One paper <a href="https://arxiv.org/abs/2410.14059">(UCFE-Benchmark)</a> was accepted to <i><a href="https://2025.naacl.org/">Findings of NAACL 2025</a></i>.</p>
+                        <p><b>08/2024:</b> A financial foundation model, <a href="https://huggingface.co/TheFinAI/FinLLaMA-instruct">FinLLaMA-8B</a>, and a multimodal model, <a href="https://huggingface.co/TheFinAI/FinLLaVA">FinLLaVA-8B</a>, were released.</p>
+                        <p><b>03/2024:</b> My first publication <a href="https://www.sciencedirect.com/science/article/abs/pii/S1566253524001040?via%3Dihub">(FAST-CA)</a> was accepted to <i>Information Fusion 2024</i>.</p>
+                      </div>
+                      <div class="news-toggle-arrow" onclick="toggleNews()" id="newsToggleBtn">•••</div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table> -->
+
+            <!-- Research Section -->
+            <table class="content-table">
+              <tbody>
+                <tr>
+                  <td class="section-padding">
+                    <heading>Research</heading>
+                    <p>
+                      My research focuses on building data-efficient, adaptive learning systems across three fronts:
+                      (1) <b>online learning with LLMs</b>—leveraging LLMs’ reasoning and learning abilities, combined with online algorithms, to solve scenario-driven problems from streaming data and human/implicit feedback;
+                      (2) <b>reinforcement learning</b>—developing methods and applications to tackle agentic RL problems, turning feedback into reliable decision-making and controllable behaviors; and
+                      (3) <b>diversity in graph generative models</b>, where I study both RL-trained and training-free approaches to broaden coverage, mitigate mode collapse, and enable fine-grained control.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+<!-- Selected Publications Section -->
+<!-- <table id="publications" class="content-table">
+  <tbody>
+    <tr>
+      <td class="section-padding">
+        <heading>Selected Publications</heading>
+        <p>Discover more on <a href="publications.html">Publications</a> page or <a href="https://scholar.google.com/citations?user=Oj296F8AAAAJ&hl=en">Google Scholar</a>. <span style="color: gray;">(* indicates equal contribution)</span></p>
+
+        
+        <!-- TwinMarket Publication -->
+        <!-- <p class="selected-pub-authors"><b>Yuzhe Yang*</b>, Yifei Zhang*, Minghao Wu*, et al.</p>
+        <b>TwinMarket: A Scalable Behavioral and Social Simulation for Financial Markets</b>
+        <br />
+        <i>Proceedings of NeurIPS 2025</i>
+        <br />
+        <a href="./src/img/best_paper.jpg"><b>Best Paper Award</b></a>, <i>ICLR 2025 Workshop on Advances in Financial AI</i>
+        <br />
+        A multi-agent framework that leverages LLMs to simulate socio-economic systems
+        <br />
+        <a href="https://arxiv.org/abs/2502.01506">Paper</a> /
+        <a href="https://github.com/FreedomIntelligence/TwinMarket">Code</a> /
+        <a href="https://freedomintelligence.github.io/TwinMarket/">Project Page</a>
+        <br />
+        <br />
+          
+          <!-- UCFE Publication -->
+          <!-- <p class="selected-pub-authors"><b>Yuzhe Yang*</b>, Yifei Zhang*, Yan Hu*, et al.</p>
+          <b>UCFE: A User-Centric Financial Expertise Benchmark for Large Language Models</b>
+          <br />
+          <i>Findings of NAACL 2025</i>
+          <br />
+          A User-Centric framework designed to evaluate LLMs' ability to handle complex financial tasks
+          <br />
+          <a href="https://aclanthology.org/2025.findings-naacl.300/">Paper</a> /
+          <a href="https://github.com/TobyYang7/UCFE-Benchmark">Code</a> /
+          <a href="https://huggingface.co/datasets/TobyYang7/UCFE">Dataset</a>
+          <br />
+          <br />
+
+          <!-- Feature Extraction and Steering Publication -->
+          <!-- <p class="selected-pub-authors">Zihao Li*, Xu Wang*, <b>Yuzhe Yang</b>, et al.</p>
+          <b>Feature Extraction and Steering for Enhanced Chain-of-Thought Reasoning in Language Models</b>
+          <br />
+          <i>Proceedings of EMNLP 2025</i>
+          <br />
+          Enhance LLM reasoning by steering activations via a novel SAE-free method using Chain-of-Thought features, without external data
+          <br />
+          <a href="https://arxiv.org/abs/2505.15634">Paper</a>
+          <br />
+          <br />
+
+        <!-- FDPT Publication -->
+        <!-- <p class="selected-pub-authors">Jiaqi Wu, Simin Chen, Jing Tang, <b>Yuzhe Yang</b>, et al.</p>
+        <b>FDPT: Federated Discrete Prompt Tuning for Black-Box Visual-Language Models</b>
+        <br />
+        <i>Proceedings of ICCV 2025</i>
+        <br />
+        Federated prompt tuning approach for black-box visual-language models
+        <br />
+        <a href="#">Paper</a>
+        <br />
+        <br />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Projects Section -->
+<!-- <table class="content-table">
+  <tbody>
+    <tr>
+      <td class="section-padding">
+        <heading>Projects</heading>
+        <p>
+          <a href="https://github.com/ValueByte-AI/Awesome-LLM-in-Social-Science">Awesome LLM in Social Science</a><br>
+          <a href="https://github.com/TobyYang7/Llava_Qwen2">LLaVA-Qwen2: Enhanced with Qwen2 Base Model</a><br>
+          <a href="https://github.com/TobyYang7/Black-Box-Tuning">DeepSeek and LLaMA Implementation for Black-Box-Tuning (ICML 2022)</a><br>
+          <a href="https://github.com/TobyYang7/Quant-GPT">Quant-GPT: Money is All You Need</a><br>
+          <a href="https://github.com/TobyYang7/Travel-Insurance-Recommendation-AI-System">Travel Insurance Recommendation AI System</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
+
+<!-- Experiences -->
+<table id="experience" class="content-table">
+  <tbody>
+    <tr>
+      <td class="section-padding">
+        <heading>Experiences</heading>
+        <br />
+        <p>
+
+        <!-- UNC–Chapel Hill -->
+        <div class="experience-item">
+          <img src="./src/img/unc_logo.png" alt="UNC Logo" class="experience-logo" />
+          <div class="experience-content">
+            <b>University of North Carolina at Chapel Hill</b>
+            <span class="experience-date">2024.1 – Present</span><br/>
+            Research Assistant &amp M.S. Student (Statistics &amp; Operations Research)<br/>
+            Advised by <a href="https://gtchen430.github.io/">Prof. Guanting Chen</a> and
+            <a href="https://xiaocheng-li.github.io/">Prof. Xiaocheng Li</a>.
+          </div>
+        </div>
+
+        <!-- A*STAR collaboration -->
+        <div class="experience-item">
+          <img src="./src/img/A_STAR_logo.png" alt="A*STAR Logo" class="experience-logo" />
+          <div class="experience-content">
+            <b>Agency for Science, Technology and Research (A*STAR)</b>
+            <span class="experience-date">2025.6 – Present</span><br/>
+            Research Assistant<br/>
+            Advised by <a href="https://xingruiyu.github.io/">Prof. Xingrui Yu</a> and
+            <a href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang">Prof. Ivor Tsang</a>.
+          </div>
+        </div>
+
+        <!-- CUHK-Shenzhen SDS RA -->
+        <div class="experience-item">
+          <img src="./src/img/cuhk.png" alt="CUHK Logo" class="experience-logo" />
+          <div class="experience-content">
+            <b>School of Data Science, CUHK–Shenzhen</b>
+            <span class="experience-date">2023.11 – 2025.5</span><br/>
+            Undergraduate Research Assistant<br/>
+            Advised by <a href="https://sds.cuhk.edu.cn/en/teacher/268">Prof. Jianfeng Mao</a>.<br/>
+          </div>
+        </div>
+
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<!-- Services -->
+<!-- <table class="content-table">
+  <tbody>
+    <tr>
+      <td class="section-padding">
+        <heading>Services</heading>
+        <p>
+          <b>Reviewer:</b> IJCAI 2025, ICLR 2025 Workshop, ACL 2025 SRW
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
+
+            <!-- Miscellaneous Section -->
+            <!-- <table class="content-table">
+              <tbody>
+                <tr>
+                  <td class="section-padding">
+                    <heading>Miscellaneous</heading>
+                    <p>
+                      📸 I am an amateur photographer with an interest in
+                      digital, film, and aerial photography, with a special
+                      passion for landscape photography 🏔️. You can find my
+                      photos on
+                      <a href="https://unsplash.com/@tobyyang">Unsplash</a> 🎞️.
+                      Also, you can visit my
+                      <a href="https://tobyyang7.github.io/photo"
+                        >HDR photo gallery</a
+                      >.
+                    </p>
+                    <img src="src/img/preview.png" width="100%" />
+                    <br />
+                  </td>
+                </tr>
+              </tbody>
+            </table> -->
+
+            <!-- Footer Section -->
+            <!-- <table class="content-table">
+              <tbody>
+                <tr>
+                  <td class="zero-padding">
+                    <br />
+                    <div class="footer-center">
+                      <script
+                        type="text/javascript"
+                        id="clustrmaps"
+                        src="//cdn.clustrmaps.com/map_v2.js?cl=5ab2ff&w=300&t=tt&d=xoDg7VaCrLXmmLZN9tIoONrsj5uu62Bt8Fx4GVA9cuM&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353"
+                      ></script>
+                    </div>
+                    <p class="footer-text">
+                      2024-2025 ©️ Jingxuan Wu
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

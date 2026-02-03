@@ -1,0 +1,918 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPGQ3q5d0.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* SF Pro font family - using system fonts and fallback */
+@font-face {
+  font-family: 'SF Pro';
+  src: local('-apple-system'), local('BlinkMacSystemFont'), local('SF Pro Display'), local('SF Pro Text'), local('Inter');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Inter font as additional fallback */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+a {
+  color: #97413a; /* #314e64; */ /* #1772d0; */
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #313164; /* #f09228; */
+  text-decoration: none;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 350
+}
+
+b {
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+heading {
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 22px;
+  /*color: #313164;*/
+  text-decoration: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-color: #97413a;
+  text-decoration-color: #97413a; /* #ac715b; */
+  font-weight: 500;
+}
+
+papertitle {
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+name {
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 40px;
+  transition: all 1s;
+  font-variation-settings: "wght" 300, "ital" 0;
+  text-align: center;
+  color: #000000;
+}
+
+
+/* 1. 供渐变用的颜色变量 */
+:root {
+  --clr-1: #00c2ff;
+  --clr-2: #33ff8c;
+  --clr-3: #ffc640;
+  --clr-4: #e54cff;
+  --clr-5: #ff4f81;
+  --clr-6: #8e44ad;
+  --clr-7: #00ffd5;
+}
+
+/* 2. 普通状态保持不变 —— 这里略 */
+
+/* 3. Aurora 渐变 Hover 版 */
+name:hover {
+  /* 字体 ▸ 斜体/字重随个人口味调整 */
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 45px;
+  font-variation-settings: "wght" 1200, "ital" 0;
+
+  /* 让文本填充由渐变决定 */
+  color: transparent;                 /* 本体透明 */
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;      /* 渐变裁剪到文字 */
+          background-clip: text;
+  -webkit-text-stroke: 0;             /* 取消描边 */
+
+  /* Aurora 渐变本体 */
+  background-image: linear-gradient(
+      130deg,
+      var(--clr-1),
+      var(--clr-2),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),
+      var(--clr-6),
+      var(--clr-7)
+  );
+  background-size: 400% 400%;         /* 做流动动画要放大画布 */
+
+  /* 流动动画 */
+  animation: aurora-shift 5s ease-in-out infinite;
+}
+
+/* 4. 渐变流动关键帧 */
+@keyframes aurora-shift {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}
+
+name-normal {
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 40px;
+  transition: all 1s;
+  -webkit-text-stroke: 1px #000000;
+  font-variation-settings: "wght" 100, "ital" 0;
+  text-align: center;
+  color: #000000;
+  text-shadow: none;
+}
+
+name-normal:hover {
+  font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-variation-settings: "wght" 700, "ital" 1;
+  -webkit-text-stroke: 0px #000000;
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #fbe8ab; /* #ffffd0; */
+}
+
+span.badge {
+  font-size: 13px;
+  background-color: #313164;
+  color: #ffffff;
+  font-weight: 600;
+  padding-right: .4em;
+  padding-left: .4em;
+  padding-top: .05em;
+  padding-bottom: .05em;
+  border-radius: 10rem;
+}
+
+/* Menu container */
+#menu {
+    display: table;
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding: 0 10px; /* 添加左右内边距以与内容区域对齐 */
+    box-sizing: border-box; /* 确保padding不会增加总宽度 */
+}
+
+/* Individual menu items */
+#menu div {
+    display: table-cell;
+    width: 20%;
+    text-align: center;
+    vertical-align: middle;
+    color: #333;
+    transition: all 0.3s;
+    font-variation-settings: "wght" 500, "ital" 0;
+}
+
+/* Hover effect on each menu item */
+#menu div:hover {
+    background: #ffe1df;
+    font-variation-settings: "wght" 1200, "ital" 0;
+}
+
+/* Active (selected) menu item */
+#menu .now {
+    background: #eee;
+    color: #97413a;
+}
+
+/* Menu links styling */
+#menu a {
+    display: block;
+    padding: 5px 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Hover effect for links */
+#menu a:hover {
+    text-decoration: none;
+}
+
+.menu-container {
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 8px 0;
+border-top: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+margin: 10px 0;
+}
+
+.menu-item {
+margin: 0 15px;
+}
+
+.menu-item a {
+text-decoration: none;
+color: #333;
+font-weight: 500;
+padding: 5px 10px;
+transition: all 0.3s ease;
+}
+
+.menu-item.active a {
+color: #007bff;
+font-weight: 600;
+}
+
+.menu-item.active a {
+color: #007bff;
+font-weight: 600;
+}
+
+.year-divider {
+  padding: 20px 0;
+  position: relative;
+  text-align: center;
+}
+
+.year-divider hr {
+  border: none;
+  height: 2px; /* 稍微增加线条粗细 */
+  background: #ddd; /* 纯色线条 */
+  margin: 0;
+}
+
+.year-divider .year-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #666;
+  font-weight: normal;
+}
+
+.profile-container {
+  width: 100%;
+  perspective: 1000px;
+  }
+
+  .profile-card {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  }
+
+  .profile-container:hover .profile-card {
+  transform: rotateY(180deg);
+  }
+
+  .profile-front,
+  .profile-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  }
+
+  .profile-back {
+  transform: rotateY(180deg);
+  }
+
+/* 新增的布局样式 */
+.main-container {
+  width: 100%;
+  max-width: 1000px;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content-table {
+  width: 100%;
+  border: 0px;
+  border-spacing: 0px;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Publications section内部的table应该左对齐 */
+#publications .content-table {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Selected Publications样式 */
+.selected-pub-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.selected-pub-authors {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.selected-pub-venue {
+  font-size: 14px;
+  margin-bottom: 3px;
+  margin-top: 0;
+}
+
+.selected-pub-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 3px;
+  margin-top: 0;
+}
+
+.selected-pub-links {
+  font-size: 14px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.zero-padding {
+  padding: 0px;
+}
+
+.profile-section {
+  padding: 0 10px; /* 减少左右内边距 */
+  padding-right: 10px; /* 右侧稍微多一点间距，但整体更紧凑 */
+  width: 75%;
+  vertical-align: middle;
+}
+
+.profile-image-section {
+  padding: 0;
+  padding-left: 5px; /* 进一步减少左侧间距 */
+  width: 25%;
+  max-width: 25%;
+}
+
+/* 桌面端头像容器位置优化 */
+.profile-image-section .profile-container {
+  margin-top: 15px !important; /* 减少顶部间距，与文字更好对齐 */
+}
+
+.section-padding {
+  padding: 0 10px; /* 为文字内容添加小的左右margin */
+  padding-top: 10px; /* 减少section顶部间距 */
+  padding-bottom: 10px; /* 减少section底部间距 */
+  width: 100%;
+  vertical-align: middle;
+}
+
+.publication-image {
+  padding: 0px;
+  padding-right: 10px; /* 图片右侧添加小间隔 */
+  width: 35%;
+  vertical-align: middle;
+}
+
+.publication-content {
+  padding: 0 10px; /* 文字内容左右添加小margin */
+  width: 65%;
+  vertical-align: middle;
+}
+
+.publication-content:hover {
+  background-color: #fef9e7bb; /* 淡黄色背景 */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.profile-video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-img {
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.social-link {
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.social-icon {
+  height: 25px;
+  vertical-align: middle;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.experience-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-date {
+  margin-left: auto;
+  float: right;
+  color: gray;
+}
+
+.experience-note {
+  color: gray;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: small;
+  color: gray;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.heading-margin {
+  display: block;
+  margin-top: 25px; /* 减少标题上方间距 */
+  margin-bottom: 15px; /* 减少标题下方间距 */
+}
+
+/* 桌面端隐藏移动端的profile容器 */
+.mobile-profile-container {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* 主容器在移动端的调整 */
+  .main-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  /* 个人资料行在移动端变为垂直布局 */
+  .profile-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-row td {
+    display: block;
+    width: 100%;
+    order: 0;
+  }
+
+  /* 个人资料部分在移动端的调整 */
+  .profile-section {
+    width: 100%;
+    padding: 15px;
+    display: block;
+    order: 1;
+  }
+
+  .profile-image-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 15px; /* 减少上下间距 */
+    display: block;
+    text-align: center;
+    order: 2;
+  }
+
+  /* 移动端头像容器调整 - 缩小20% */
+  .profile-container {
+    width: 200px; /* 从160px增加到200px */
+    margin: 15px auto !important; /* 减少上下间距 */
+  }
+
+  /* 移动端专用的profile尺寸 */
+  .mobile-profile-size {
+    width: 200px !important;
+    margin: 20px auto !important;
+  }
+
+  /* 移动端专用的profile容器 */
+  .mobile-profile-container {
+    display: block !important;
+    text-align: center;
+    margin: 15px 0; /* 减少上下间距 */
+  }
+
+  /* 移动端隐藏桌面端的profile */
+  .profile-image-section {
+    display: none !important;
+  }
+
+  /* 移动端名字字体调整 */
+  name {
+    font-size: 32px;
+  }
+
+  name:hover {
+    font-size: 36px;
+  }
+
+  /* 移动端标题调整 */
+  heading {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  /* 修复experience标题的居中问题 */
+  .heading-margin {
+    text-align: left;
+  }
+
+  /* 移动端段落调整 */
+  .section-padding {
+    padding: 8px;
+  }
+
+  /* 移动端发表论文部分 - 垂直布局 */
+  .publication-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .publication-image {
+    width: 100%;
+    padding: 0 10px; /* 图片左右保持小margin */
+    padding-bottom: 10px; /* 图片下方添加小间隔 */
+    text-align: center;
+    display: block !important;
+  }
+
+  .publication-image img {
+    width: 100%; /* 图片宽度占满容器宽度 */
+    max-width: 100%;
+    height: auto;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .publication-content {
+    width: 100%;
+    padding: 10px; /* 文字内容四周添加小margin，方便阅读 */
+  }
+
+  /* 移动端经历部分 - 保持与电脑端一样 */
+  .experience-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .experience-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+
+  .experience-content {
+    flex: 1;
+  }
+
+  .experience-date {
+    margin-left: auto;
+    float: right;
+    color: gray;
+  }
+
+  /* 移动端菜单调整 */
+  #menu {
+    margin-bottom: 20px;
+    padding: 0 15px; /* 移动端使用与section-padding一致的15px内边距 */
+  }
+
+  #menu div {
+    width: 25%;
+    font-size: 12px;
+    padding: 8px 2px;
+  }
+
+  /* 移动端社交链接调整 */
+  .social-links {
+    margin-top: 20px;
+  }
+
+  .social-icon {
+    height: 30px;
+    margin: 0 8px;
+  }
+
+  /* 移动端年份分隔线调整 */
+  .year-divider {
+    padding: 15px 0;
+  }
+
+  .year-divider .year-label {
+    font-size: 12px;
+    padding: 0 8px;
+  }
+
+  /* 移动端表格调整 */
+  .content-table {
+    width: 100%;
+  }
+
+  /* 移动端Publications section内部的table也应该左对齐 */
+  #publications .content-table {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+
+
+  /* 移动端字体大小调整 */
+  body, td, th, tr, p, a {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  papertitle {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* 移动端按钮和链接调整 */
+  .social-link {
+    margin-right: 8px;
+  }
+
+  /* 移动端预览图片调整 */
+  .section-padding img[src="src/img/preview.png"] {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* 针对更小屏幕的调整 */
+@media screen and (max-width: 480px) {
+  .main-container {
+    padding: 0 5px;
+  }
+
+  .profile-section, .profile-image-section {
+    padding: 10px;
+  }
+
+  .section-padding {
+    padding: 10px;
+  }
+
+  name {
+    font-size: 28px;
+  }
+
+  name:hover {
+    font-size: 32px;
+  }
+
+  heading {
+    font-size: 18px;
+  }
+
+  body, td, th, tr, p, a {
+    font-size: 14px;
+  }
+
+  papertitle {
+    font-size: 15px;
+  }
+
+  #menu {
+    padding: 0 10px; /* 小屏幕时使用与section-padding一致的10px内边距 */
+  }
+
+  #menu div {
+    font-size: 11px;
+    padding: 6px 1px;
+  }
+
+  .experience-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .experience-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+
+  .profile-container {
+    width: 120px; /* 480px断点下进一步缩小 */
+  }
+
+  .mobile-profile-size {
+    width: 120px !important;
+  }
+
+  .social-icon {
+    height: 25px;
+    margin: 0 6px;
+  }
+
+  /* 小屏幕时论文图片占满宽度 */
+  .publication-image {
+    padding: 0 8px !important; /* 小屏幕时稍微减少左右margin */
+    padding-bottom: 8px !important; /* 图片下方添加小间隔 */
+    display: block !important;
+    text-align: center !important;
+  }
+
+  .publication-image img {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* 小屏幕时论文文字内容也占满宽度，和图片一样 */
+  .publication-content {
+    width: 100% !important;
+    padding: 8px !important; /* 小屏幕时文字内容四周添加小margin */
+  }
+
+
+}
+
+/* News section styles */
+.news-container {
+  margin-top: 10px;
+}
+
+.news-visible p,
+.news-hidden p {
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.news-toggle-arrow {
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #97413a;
+  margin-top: 8px;
+  padding: 4px;
+  transition: all 0.3s ease;
+  user-select: none;
+  letter-spacing: 2px;
+}
+
+.news-toggle-arrow:hover {
+  color: #313164;
+  transform: scale(1.2);
+}
+
+.news-hidden {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Mobile responsive for news arrow */
+@media screen and (max-width: 768px) {
+  .news-toggle-arrow {
+    font-size: 15px;
+    padding: 3px;
+    margin-top: 6px;
+  }
+}
+
+/* 移动端字体优化 */
+@media screen and (max-width: 768px) {
+  /* 确保移动端使用圆润字体 */
+  body, td, th, tr, p, a, b, heading, papertitle, name, name-normal {
+    font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* 移动端字体渲染优化 */
+  * {
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+  }
+}
