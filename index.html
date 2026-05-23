@@ -47,19 +47,28 @@
     }
   
     .news-more summary {
-      cursor: pointer;
-      color: #1772d0;
-      font-weight: bold;
-      margin-top: 8px;
-    }
+    cursor: pointer;
+    color: #1772d0;
+    font-weight: bold;
+    margin-top: 8px;
+    list-style: none;
+  }
   
-    .news-more summary:hover {
-      text-decoration: underline;
-    }
+  .news-more summary::-webkit-details-marker {
+    display: none;
+  }
   
-    .news-more {
-      margin-top: 10px;
-    }
+  .news-more summary::before {
+    content: "▼ Show more";
+  }
+  
+  .news-more[open] summary::before {
+    content: "▲ Show less";
+  }
+  
+  .news-more summary:hover {
+    text-decoration: underline;
+  }
   </style>
   </head>
 
@@ -218,7 +227,7 @@
                       </p>
                     
                       <details class="news-more">
-                        <summary>Show more news</summary>
+                        <summary></summary>
                     
                         <p>
                           <b>08/2025:</b> I started my M.S. degree in Statistics and Operations Research at 
@@ -230,7 +239,9 @@
                           <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a> 
                           with First Class Honors. Looking forward to a new journey! 🎓
                         </p>
+                    
                       </details>
+                    
                     </div>
                   </td>
                 </tr>
