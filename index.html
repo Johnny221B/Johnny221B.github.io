@@ -40,10 +40,27 @@
         }
       }
     </script>
-    <style>
-      /* Smaller font for emails */
-      #email code { font-size: 90%; }
-    </style>
+  <style>
+    /* Smaller font for emails */
+    #email code { 
+      font-size: 90%; 
+    }
+  
+    .news-more summary {
+      cursor: pointer;
+      color: #1772d0;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+  
+    .news-more summary:hover {
+      text-decoration: underline;
+    }
+  
+    .news-more {
+      margin-top: 10px;
+    }
+  </style>
   </head>
 
   <body>
@@ -183,29 +200,37 @@
                   <td class="section-padding">
                     <heading>News</heading>
                     <div class="news-container">
-                      <div class="news-visible">
-                        <p>
-                          <b>05/2026:</b> One paper 
-                          <a href="https://taps-dlm.github.io/">(TAPS)</a> 
-                          was accepted to the <i>ICML 2026 Workshop on SPIGM</i>.
-                        </p>
-                        <p>
-                          <b>04/2026:</b> Two papers 
-                          <a href="https://arxiv.org/abs/2510.09060">(OSCAR)</a> and 
-                          <a href="https://arxiv.org/abs/2510.09222">(FM-IRL)</a> 
-                          were accepted to <i><a href="https://icml.cc/Conferences/2026">ICML 2026</a></i>. 
-                          See you in Seoul! 🇰🇷
-                        </p>
+                    
+                      <p>
+                        <b>05/2026:</b> One paper 
+                        <a href="https://taps-dlm.github.io/">(TAPS)</a> 
+                        was accepted to the 
+                        <i><a href="https://spigmworkshop2026.github.io/">ICML 2026 Workshop on SPIGM</a></i>.
+                      </p>
+                    
+                      <p>
+                        <b>04/2026:</b> Two papers 
+                        <a href="https://arxiv.org/abs/2510.09060">(OSCAR)</a> and 
+                        <a href="https://arxiv.org/abs/2510.09222">(FM-IRL)</a> 
+                        were accepted to 
+                        <i><a href="https://icml.cc/Conferences/2026">ICML 2026</a></i>. 
+                        See you in Seoul! 🇰🇷
+                      </p>
+                    
+                      <details class="news-more">
+                        <summary>Show more news</summary>
+                    
                         <p>
                           <b>08/2025:</b> I started my M.S. degree in Statistics and Operations Research at 
                           <a href="https://stor.unc.edu/">UNC STOR</a>.
                         </p>
+                    
                         <p>
                           <b>05/2025:</b> I received my B.Sc. from 
                           <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a> 
                           with First Class Honors. Looking forward to a new journey! 🎓
                         </p>
-                      </div>
+                      </details>
                     </div>
                   </td>
                 </tr>
