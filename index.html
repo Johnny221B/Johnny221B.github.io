@@ -27,48 +27,39 @@
     
     <!-- News toggle functionality -->
     <script>
-      function toggleNews() {
-        const moreNews = document.getElementById('moreNews');
-        const toggleBtn = document.getElementById('newsToggleBtn');
-        
-        if (moreNews.style.display === 'none') {
-          moreNews.style.display = 'block';
-          toggleBtn.innerHTML = '−';
-        } else {
-          moreNews.style.display = 'none';
-          toggleBtn.innerHTML = '•••';
-        }
+    function toggleNews() {
+      const moreNews = document.getElementById('moreNews');
+      const toggleBtn = document.getElementById('newsToggleBtn');
+  
+      if (moreNews.style.display === 'none') {
+        moreNews.style.display = 'block';
+        toggleBtn.innerHTML = '▲ Show less';
+      } else {
+        moreNews.style.display = 'none';
+        toggleBtn.innerHTML = '▼ Show more';
       }
-    </script>
+    }
+  </script>
   <style>
     /* Smaller font for emails */
     #email code { 
       font-size: 90%; 
     }
   
-    .news-more summary {
-    cursor: pointer;
-    color: #1772d0;
-    font-weight: bold;
-    margin-top: 8px;
-    list-style: none;
-  }
+    .news-toggle {
+      background: none;
+      border: none;
+      color: #1772d0;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 0;
+      margin-top: 8px;
+    }
   
-  .news-more summary::-webkit-details-marker {
-    display: none;
-  }
-  
-  .news-more summary::before {
-    content: "▼ Show more";
-  }
-  
-  .news-more[open] summary::before {
-    content: "▲ Show less";
-  }
-  
-  .news-more summary:hover {
-    text-decoration: underline;
-  }
+    .news-toggle:hover {
+      text-decoration: underline;
+    }
   </style>
   </head>
 
@@ -226,9 +217,7 @@
                         See you in Seoul! 🇰🇷
                       </p>
                     
-                      <details class="news-more">
-                        <summary></summary>
-                    
+                      <div id="moreNews" style="display: none;">
                         <p>
                           <b>08/2025:</b> I started my M.S. degree in Statistics and Operations Research at 
                           <a href="https://stor.unc.edu/">UNC STOR</a>.
@@ -239,8 +228,11 @@
                           <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a> 
                           with First Class Honors. Looking forward to a new journey! 🎓
                         </p>
+                      </div>
                     
-                      </details>
+                      <button id="newsToggleBtn" class="news-toggle" onclick="toggleNews()">
+                        ▼ Show more news
+                      </button>
                     
                     </div>
                   </td>
