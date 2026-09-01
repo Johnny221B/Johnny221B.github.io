@@ -7,6 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="src/stylesheet.css" />
     <link rel="icon" href="./src/logo/unc.png" type="image/x-icon" />
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = savedTheme || systemTheme;
+      })();
+
+      function updateThemeButton() {
+        const button = document.getElementById("themeToggle");
+        if (!button) return;
+        const isDark = document.documentElement.dataset.theme === "dark";
+        button.textContent = isDark ? "☀" : "☾";
+        button.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+        button.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+      }
+
+      function toggleTheme() {
+        const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = nextTheme;
+        localStorage.setItem("theme", nextTheme);
+        updateThemeButton();
+      }
+
+      document.addEventListener("DOMContentLoaded", updateThemeButton);
+    </script>
     <!-- Google Fonts for handwriting style and rounded fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +52,7 @@
   </head>
 
   <body>
+    <button id="themeToggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch color theme"></button>
     <table class="main-container">
       <tbody>
         <tr class="zero-padding">
