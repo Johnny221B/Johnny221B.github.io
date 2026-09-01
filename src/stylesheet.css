@@ -75,13 +75,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 a {
-  color: #97413a; /* #314e64; */ /* #1772d0; */
+  color: var(--link-color); /* #314e64; */ /* #1772d0; */
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #313164; /* #f09228; */
+  color: var(--link-hover); /* #f09228; */
   text-decoration: none;
 }
 
@@ -94,6 +94,13 @@ a {
   font-family: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'SF Pro', 'Inter', 'Lato', system-ui, -webkit-system-font, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   font-weight: 350
+}
+
+body {
+  margin: 0;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 b {
@@ -125,12 +132,27 @@ name {
   transition: all 1s;
   font-variation-settings: "wght" 300, "ital" 0;
   text-align: center;
-  color: #000000;
+  color: var(--text-color);
 }
 
 
 /* 1. 供渐变用的颜色变量 */
 :root {
+  color-scheme: light;
+  --page-bg: #ffffff;
+  --text-color: #202124;
+  --link-color: #97413a;
+  --link-hover: #313164;
+  --muted-color: #666666;
+  --border-color: #dddddd;
+  --menu-text: #333333;
+  --menu-hover: #ffe1df;
+  --menu-active: #eeeeee;
+  --publication-hover: #fef9e7bb;
+  --description-color: #555555;
+  --highlight-bg: #fbe8ab;
+  --toggle-bg: rgba(255, 255, 255, 0.92);
+  --toggle-shadow: rgba(0, 0, 0, 0.14);
   --clr-1: #00c2ff;
   --clr-2: #33ff8c;
   --clr-3: #ffc640;
@@ -138,6 +160,24 @@ name {
   --clr-5: #ff4f81;
   --clr-6: #8e44ad;
   --clr-7: #00ffd5;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --page-bg: #171a1f;
+  --text-color: #e8eaf0;
+  --link-color: #f0a39c;
+  --link-hover: #aeb8ff;
+  --muted-color: #adb3bd;
+  --border-color: #3a404a;
+  --menu-text: #e5e7eb;
+  --menu-hover: #3a2a2c;
+  --menu-active: #2b3038;
+  --publication-hover: #2a2721;
+  --description-color: #b8bec8;
+  --highlight-bg: #594d24;
+  --toggle-bg: rgba(36, 40, 47, 0.94);
+  --toggle-shadow: rgba(0, 0, 0, 0.35);
 }
 
 /* 2. 普通状态保持不变 —— 这里略 */
@@ -187,7 +227,7 @@ name-normal {
   -webkit-text-stroke: 1px #000000;
   font-variation-settings: "wght" 100, "ital" 0;
   text-align: center;
-  color: #000000;
+  color: var(--text-color);
   text-shadow: none;
 }
 
@@ -219,7 +259,7 @@ name-normal:hover {
 }
 
 span.highlight {
-  background-color: #fbe8ab; /* #ffffd0; */
+  background-color: var(--highlight-bg); /* #ffffd0; */
 }
 
 span.badge {
@@ -239,8 +279,8 @@ span.badge {
     display: table;
     width: 100%;
     margin-bottom: 15px;
-    border-top: 1px solid #999;
-    border-bottom: 1px solid #999;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     padding: 0 10px; /* 添加左右内边距以与内容区域对齐 */
     box-sizing: border-box; /* 确保padding不会增加总宽度 */
 }
@@ -251,21 +291,21 @@ span.badge {
     width: 20%;
     text-align: center;
     vertical-align: middle;
-    color: #333;
+    color: var(--menu-text);
     transition: all 0.3s;
     font-variation-settings: "wght" 500, "ital" 0;
 }
 
 /* Hover effect on each menu item */
 #menu div:hover {
-    background: #ffe1df;
+    background: var(--menu-hover);
     font-variation-settings: "wght" 1200, "ital" 0;
 }
 
 /* Active (selected) menu item */
 #menu .now {
-    background: #eee;
-    color: #97413a;
+    background: var(--menu-active);
+    color: var(--link-color);
 }
 
 /* Menu links styling */
@@ -287,8 +327,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 8px 0;
-border-top: 1px solid #ddd;
-border-bottom: 1px solid #ddd;
+border-top: 1px solid var(--border-color);
+border-bottom: 1px solid var(--border-color);
 margin: 10px 0;
 }
 
@@ -298,7 +338,7 @@ margin: 0 15px;
 
 .menu-item a {
 text-decoration: none;
-color: #333;
+color: var(--menu-text);
 font-weight: 500;
 padding: 5px 10px;
 transition: all 0.3s ease;
@@ -323,7 +363,7 @@ font-weight: 600;
 .year-divider hr {
   border: none;
   height: 2px; /* 稍微增加线条粗细 */
-  background: #ddd; /* 纯色线条 */
+  background: var(--border-color); /* 纯色线条 */
   margin: 0;
 }
 
@@ -332,10 +372,10 @@ font-weight: 600;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: var(--page-bg);
   padding: 0 10px;
   font-size: 14px;
-  color: #666;
+  color: var(--muted-color);
   font-weight: normal;
 }
 
@@ -404,7 +444,7 @@ font-weight: 600;
 
 .selected-pub-authors {
   font-size: 13px;
-  color: #555;
+  color: var(--description-color);
   margin-bottom: 3px;
   margin-top: 3px;
 }
@@ -417,7 +457,7 @@ font-weight: 600;
 
 .selected-pub-description {
   font-size: 14px;
-  color: #666;
+  color: var(--muted-color);
   margin-bottom: 3px;
   margin-top: 0;
 }
@@ -473,7 +513,7 @@ font-weight: 600;
 }
 
 .publication-content:hover {
-  background-color: #fef9e7bb; /* 淡黄色背景 */
+  background-color: var(--publication-hover); /* 淡黄色背景 */
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -798,8 +838,49 @@ font-weight: 600;
 .publication-badge.journal { background-color: #27856f; }
 
 .publication-description {
-  color: #555;
+  color: var(--description-color);
   font-style: italic;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 1000;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background: var(--toggle-bg);
+  color: var(--text-color);
+  box-shadow: 0 4px 14px var(--toggle-shadow);
+  font-family: inherit;
+  font-size: 23px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px) rotate(8deg);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--link-color);
+  outline-offset: 3px;
+}
+
+html[data-theme="dark"] [style*="color: gray"] {
+  color: var(--muted-color) !important;
+}
+
+html[data-theme="dark"] .social-icon {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
 }
 
 @media screen and (max-width: 768px) {
@@ -808,6 +889,15 @@ font-weight: 600;
     left: -5px;
     font-size: 12px;
     padding: 5px 10px;
+  }
+
+  .theme-toggle {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    font-size: 21px;
+    line-height: 36px;
   }
 }
 
