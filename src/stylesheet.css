@@ -763,6 +763,54 @@ font-weight: 600;
   }
 }
 
+/* Publication figure labels and concise project summaries */
+.publication-figure {
+  position: relative;
+  width: 100%;
+}
+
+.publication-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.publication-badge {
+  position: absolute;
+  top: -10px;
+  left: -8px;
+  z-index: 2;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.16);
+}
+
+.publication-badge.conference { background-color: #2f73d9; }
+.publication-badge.workshop { background-color: #8057b8; }
+.publication-badge.report { background-color: #e65245; }
+.publication-badge.preprint { background-color: #667085; }
+.publication-badge.preparation { background-color: #b7791f; }
+.publication-badge.journal { background-color: #27856f; }
+
+.publication-description {
+  color: #555;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .publication-badge {
+    top: -7px;
+    left: -5px;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
 /* 针对更小屏幕的调整 */
 @media screen and (max-width: 480px) {
   .main-container {
