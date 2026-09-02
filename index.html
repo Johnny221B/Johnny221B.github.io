@@ -216,6 +216,7 @@
             <div id="menu">
               <div><a href="publications.html">Publications</a></div>
               <div><a href="#experience">Experiences</a></div>
+              <div><a href="#education">Education</a></div>
               <div><a href="./src/pdf/jingxuan_cv.pdf">Curriculum Vitae</a></div>
             </div>
 
@@ -283,89 +284,77 @@
             </table>
 
 <!-- Selected Publications Section -->
-<!-- <table id="publications" class="content-table">
+<table id="selected-publications" class="content-table">
   <tbody>
     <tr>
       <td class="section-padding">
         <heading>Selected Publications</heading>
-        <p>Discover more on <a href="publications.html">Publications</a> page or <a href="https://scholar.google.com/citations?user=Oj296F8AAAAJ&hl=en">Google Scholar</a>. <span style="color: gray;">(* indicates equal contribution)</span></p>
+        <p class="selected-publications-intro">
+          Scroll to view more. <span style="color: gray;">(* indicates equal contribution)</span>
+        </p>
 
-        
-        <!-- TwinMarket Publication -->
-        <!-- <p class="selected-pub-authors"><b>Yuzhe Yang*</b>, Yifei Zhang*, Minghao Wu*, et al.</p>
-        <b>TwinMarket: A Scalable Behavioral and Social Simulation for Financial Markets</b>
-        <br />
-        <i>Proceedings of NeurIPS 2025</i>
-        <br />
-        <a href="./src/img/best_paper.jpg"><b>Best Paper Award</b></a>, <i>ICLR 2025 Workshop on Advances in Financial AI</i>
-        <br />
-        A multi-agent framework that leverages LLMs to simulate socio-economic systems
-        <br />
-        <a href="https://arxiv.org/abs/2502.01506">Paper</a> /
-        <a href="https://github.com/FreedomIntelligence/TwinMarket">Code</a> /
-        <a href="https://freedomintelligence.github.io/TwinMarket/">Project Page</a>
-        <br />
-        <br />
-          
-          <!-- UCFE Publication -->
-          <!-- <p class="selected-pub-authors"><b>Yuzhe Yang*</b>, Yifei Zhang*, Yan Hu*, et al.</p>
-          <b>UCFE: A User-Centric Financial Expertise Benchmark for Large Language Models</b>
-          <br />
-          <i>Findings of NAACL 2025</i>
-          <br />
-          A User-Centric framework designed to evaluate LLMs' ability to handle complex financial tasks
-          <br />
-          <a href="https://aclanthology.org/2025.findings-naacl.300/">Paper</a> /
-          <a href="https://github.com/TobyYang7/UCFE-Benchmark">Code</a> /
-          <a href="https://huggingface.co/datasets/TobyYang7/UCFE">Dataset</a>
-          <br />
-          <br />
+        <div class="selected-publications-window" tabindex="0" aria-label="Selected publications; scroll to view more">
+          <article class="selected-publication-card">
+            <div class="publication-image">
+              <div class="publication-figure">
+                <span class="publication-badge conference">ICML 2026</span>
+                <img src="./src/img/OSCAR.png" alt="OSCAR overview" />
+              </div>
+            </div>
+            <div class="publication-content">
+              <papertitle>Letting Trajectories Spread: Quality-Preserving Control for Diverse Flow Matching</papertitle>
+              <p class="selected-card-authors"><b>Jingxuan Wu*</b>, Zhenglin Wan*, Xingrui Yu, Yuzhe Yang, Bo An, Ivor Tsang</p>
+              <p class="publication-description">Improves sample diversity in flow matching while preserving generation quality.</p>
+              <div class="publication-links">
+                <a href="https://arxiv.org/abs/2510.09060">Paper</a> /
+                <a href="https://github.com/Johnny221B/OSCAR">Code</a>
+              </div>
+            </div>
+          </article>
 
-          <!-- Feature Extraction and Steering Publication -->
-          <!-- <p class="selected-pub-authors">Zihao Li*, Xu Wang*, <b>Yuzhe Yang</b>, et al.</p>
-          <b>Feature Extraction and Steering for Enhanced Chain-of-Thought Reasoning in Language Models</b>
-          <br />
-          <i>Proceedings of EMNLP 2025</i>
-          <br />
-          Enhance LLM reasoning by steering activations via a novel SAE-free method using Chain-of-Thought features, without external data
-          <br />
-          <a href="https://arxiv.org/abs/2505.15634">Paper</a>
-          <br />
-          <br />
+          <article class="selected-publication-card">
+            <div class="publication-image">
+              <div class="publication-figure">
+                <span class="publication-badge conference">ICML 2026</span>
+                <img src="./src/img/framework_overview.png" alt="AD-OPD framework overview" />
+              </div>
+            </div>
+            <div class="publication-content">
+              <papertitle>Adversarial Dual On-Policy Distillation from Expressive Teacher</papertitle>
+              <p class="selected-card-authors">Zhenglin Wan*, <b>Jingxuan Wu*</b>, Xingrui Yu, Chubin Zhang, Mingcong Lei, Bo An, Ivor Tsang</p>
+              <p class="publication-description">Distills expressive teachers into efficient policies through adversarial dual on-policy learning.</p>
+              <div class="publication-links">
+                <a href="https://arxiv.org/abs/2605.27095">Paper</a> /
+                <a href="https://github.com/vanzll/FM_IRL">Code</a>
+              </div>
+            </div>
+          </article>
 
-        <!-- FDPT Publication -->
-        <!-- <p class="selected-pub-authors">Jiaqi Wu, Simin Chen, Jing Tang, <b>Yuzhe Yang</b>, et al.</p>
-        <b>FDPT: Federated Discrete Prompt Tuning for Black-Box Visual-Language Models</b>
-        <br />
-        <i>Proceedings of ICCV 2025</i>
-        <br />
-        Federated prompt tuning approach for black-box visual-language models
-        <br />
-        <a href="#">Paper</a>
-        <br />
-        <br />
+          <article class="selected-publication-card">
+            <div class="publication-image">
+              <div class="publication-figure">
+                <span class="publication-badge workshop">ICML Workshop</span>
+                <img src="./src/img/taps.png" alt="TAPS overview" />
+              </div>
+            </div>
+            <div class="publication-content">
+              <papertitle>Time-Annealed Perturbation Sampling: Diverse Generation for Diffusion Language Models</papertitle>
+              <p class="selected-card-authors"><b>Jingxuan Wu</b>, Zhenglin Wan, Xingrui Yu, Yuzhe Yang, Yiqiao Huang, Ivor Tsang, Yang You</p>
+              <p class="publication-description">Improves diversity in diffusion language models through time-annealed perturbations while preserving generation quality.</p>
+              <div class="publication-links">
+                <a href="https://arxiv.org/abs/2601.22629">Paper</a> /
+                <a href="https://github.com/Johnny221B/TAPS">Code</a> /
+                <a href="https://taps-dlm.github.io/">Project</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="all-publications-link"><a href="publications.html">See all publications →</a></p>
       </td>
     </tr>
   </tbody>
 </table>
-
-<!-- Projects Section -->
-<!-- <table class="content-table">
-  <tbody>
-    <tr>
-      <td class="section-padding">
-        <heading>Projects</heading>
-        <p>
-          <a href="https://github.com/ValueByte-AI/Awesome-LLM-in-Social-Science">Awesome LLM in Social Science</a><br>
-          <a href="https://github.com/TobyYang7/Llava_Qwen2">LLaVA-Qwen2: Enhanced with Qwen2 Base Model</a><br>
-          <a href="https://github.com/TobyYang7/Black-Box-Tuning">DeepSeek and LLaMA Implementation for Black-Box-Tuning (ICML 2022)</a><br>
-          <a href="https://github.com/TobyYang7/Quant-GPT">Quant-GPT: Money is All You Need</a><br>
-          <a href="https://github.com/TobyYang7/Travel-Insurance-Recommendation-AI-System">Travel Insurance Recommendation AI System</a>
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table> -->
 
 <!-- Experiences -->
 <table id="experience" class="content-table">
@@ -441,6 +430,37 @@
         </div>
 
         </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Education -->
+<table id="education" class="content-table">
+  <tbody>
+    <tr>
+      <td class="section-padding">
+        <heading>Education</heading>
+        <div class="education-list">
+          <div class="experience-item education-item">
+            <img src="./src/logo/unc.png" alt="UNC–Chapel Hill Logo" class="experience-logo" />
+            <div class="experience-content">
+              <b>University of North Carolina at Chapel Hill</b>
+              <span class="experience-date">2025 – Present</span><br/>
+              M.S. in Statistics and Operations Research
+            </div>
+          </div>
+
+          <div class="experience-item education-item">
+            <img src="./src/logo/CUHK_logo.png" alt="CUHK–Shenzhen Logo" class="experience-logo" />
+            <div class="experience-content">
+              <b>The Chinese University of Hong Kong, Shenzhen</b>
+              <span class="experience-date">2021 – 2025</span><br/>
+              B.S. in Data Science and Big Data Technology<br/>
+              <span class="experience-note">First Class Honors</span>
+            </div>
+          </div>
+        </div>
       </td>
     </tr>
   </tbody>
