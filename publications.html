@@ -7,6 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="src/stylesheet.css" />
     <link rel="icon" href="./src/logo/unc.png" type="image/x-icon" />
+    <style>
+      .publication-tabs {
+        display: flex;
+        gap: 10px;
+        margin: 18px 0 12px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .publication-tab {
+        padding: 8px 16px;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        background: var(--page-bg);
+        color: var(--text-color);
+        font-family: inherit;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .publication-tab:hover {
+        color: var(--link-color);
+        border-color: var(--link-color);
+      }
+
+      .publication-tab.active {
+        color: #ffffff;
+        background: var(--link-color);
+        border-color: var(--link-color);
+      }
+
+      .publication-row[hidden],
+      .publication-year[hidden] {
+        display: none !important;
+      }
+
+      @media screen and (max-width: 480px) {
+        .publication-tabs {
+          flex-direction: column;
+        }
+
+        .publication-tab {
+          width: 100%;
+        }
+      }
+    </style>
     <script>
       (function () {
         const savedTheme = localStorage.getItem("theme");
@@ -28,6 +76,37 @@
         document.documentElement.dataset.theme = nextTheme;
         localStorage.setItem("theme", nextTheme);
         updateThemeButton();
+      }
+
+      function filterPublications(filter, selectedButton) {
+        const rows = document.querySelectorAll(".publication-row");
+        const tabs = document.querySelectorAll(".publication-tab");
+
+        rows.forEach((row) => {
+          const shouldShow = filter === "all" || row.dataset.firstAuthor === "true";
+          row.hidden = !shouldShow;
+        });
+
+        document.querySelectorAll(".publication-year").forEach((yearRow) => {
+          let nextRow = yearRow.nextElementSibling;
+          let hasVisiblePaper = false;
+
+          while (nextRow && !nextRow.classList.contains("publication-year")) {
+            if (nextRow.classList.contains("publication-row") && !nextRow.hidden) {
+              hasVisiblePaper = true;
+              break;
+            }
+            nextRow = nextRow.nextElementSibling;
+          }
+
+          yearRow.hidden = !hasVisiblePaper;
+        });
+
+        tabs.forEach((tab) => {
+          const isSelected = tab === selectedButton;
+          tab.classList.toggle("active", isSelected);
+          tab.setAttribute("aria-selected", String(isSelected));
+        });
       }
 
       document.addEventListener("DOMContentLoaded", updateThemeButton);
@@ -70,16 +149,41 @@
                     <heading>Publications</heading>
                     <p style="color: gray;">(* indicates equal contribution)</p>
 
+                    <div class="publication-tabs" role="tablist" aria-label="Publication filters">
+                      <button class="publication-tab active" type="button" role="tab" aria-selected="true" onclick="filterPublications('all', this)">All Publications</button>
+                      <button class="publication-tab" type="button" role="tab" aria-selected="false" onclick="filterPublications('first', this)">First / Co-first Author</button>
+                    </div>
+
                     <table class="content-table">
-                      <tr>
+                      <tr class="publication-year">
                         <td colspan="2" class="year-divider">
                           <hr>
                           <span class="year-label">2026</span>
                         </td>
                       </tr>
 
-                      <!-- MemFold -->
+                      <!-- Judged Useless, Queried Anyway -->
                       <tr class="publication-row">
+                        <td class="publication-image">
+                          <div class="publication-figure">
+                            <span class="publication-badge preprint">Preprint</span>
+                            <img src="./src/img/Judged Useless, Queried Anyway.png" alt="Judged Useless, Queried Anyway overview" width="100%" />
+                          </div>
+                        </td>
+                        <td class="publication-content">
+                          <papertitle>Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions</papertitle>
+                          <br />
+                          Chubin Zhang, Zhenglin Wan, Xingrui Yu, <b>Jingxuan Wu</b>, Yaxin Zhou, Ivor Tsang, Bo An
+                          <br />
+                          <span class="publication-description">Shows that tool-using agents often recognize useless evidence but fail to turn that judgment into stopping decisions.</span>
+                          <br />
+                          <a href="https://arxiv.org/abs/2610.06191">Paper</a>
+                          <p></p>
+                        </td>
+                      </tr>
+
+                      <!-- MemFold -->
+                      <tr class="publication-row" data-first-author="true">
                         <td class="publication-image">
                           <div class="publication-figure">
                             <span class="publication-badge preprint">Preprint</span>
@@ -114,7 +218,7 @@
                         </td>
                       </tr>
 
-                      <tr class="publication-row">
+                      <tr class="publication-row" data-first-author="true">
                         <td class="publication-image">
                           <div class="publication-figure">
                             <span class="publication-badge preparation">In Preparation</span>
@@ -171,7 +275,7 @@
                         </td>
                       </tr>
 
-                      <tr class="publication-row">
+                      <tr class="publication-row" data-first-author="true">
                         <td class="publication-image">
                           <div class="publication-figure">
                             <span class="publication-badge conference">NeurIPS 2026</span>
@@ -217,7 +321,7 @@
                       
 
                       
-                      <tr>
+                      <tr class="publication-year">
                         <td colspan="2" class="year-divider">
                           <hr>
                           <span class="year-label">2025</span>
@@ -225,7 +329,7 @@
                       </tr>
 
                       <!-- FM-IRL: Flow-Matching for Reward Modeling and Policy Regularization in RL (arXiv 2025) -->
-                      <tr class="publication-row">
+                      <tr class="publication-row" data-first-author="true">
                         <td class="publication-image">
                           <div class="publication-figure">
                             <span class="publication-badge conference">ICML 2026</span>
@@ -247,7 +351,7 @@
 
 
                       <!-- OSCAR Publication -->
-                      <tr class="publication-row">
+                      <tr class="publication-row" data-first-author="true">
                         <td class="publication-image">
                           <div class="publication-figure">
                             <span class="publication-badge conference">ICML 2026</span>
@@ -268,7 +372,7 @@
                       </tr>
 
                       <!-- ===== Year: 2024 ===== -->
-                      <tr>
+                      <tr class="publication-year">
                         <td colspan="2" class="year-divider">
                           <hr>
                           <span class="year-label">2024</span>
@@ -276,7 +380,7 @@
                       </tr>
 
                       <!-- LLM-Powered Predictive Decision-Making for Sustainable Data Center Operations (OpenReview 2024) -->
-                      <tr class="publication-row">
+                      <tr class="publication-row" data-first-author="true">
                         <!-- 如果有配图可在此处添加；没有就删除整个 <td class="publication-image"> 块 -->
                         <td class="publication-image">
                           <div class="publication-figure">
