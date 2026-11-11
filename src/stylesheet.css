@@ -844,6 +844,7 @@ font-weight: 600;
 .publication-badge.preprint { background-color: #667085; }
 .publication-badge.preparation { background-color: #b7791f; }
 .publication-badge.journal { background-color: #27856f; }
+.publication-badge.consortium { background-color: #27856f; }
 
 .publication-description {
   color: var(--description-color);
